@@ -1,4 +1,4 @@
-class DisplayUtils {
+export class DisplayUtils {
     static displayCurrentDay(dayName) {
         console.log(`Today is : ${dayName}.`);
     }
@@ -39,5 +39,3 @@ class DisplayUtils {
         console.log(`${fahrenheitTemp}°F is ${farenheitToCelsius} °C`)
     }
 }
-
-module.exports = DisplayUtils;

@@ -1,4 +1,4 @@
-class RandomUtils {
+export class RandomUtils {
     static getRandomIntInclusive(min, max) {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
@@ -6,5 +6,3 @@ class RandomUtils {
         return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); 
     }
 }
-
-module.exports = RandomUtils;

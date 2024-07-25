@@ -1,4 +1,4 @@
-class DateTimeUtils {
+export class DateTimeUtils {
      static getDay(date) {
         const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -48,5 +48,3 @@ class DateTimeUtils {
         return false;
     }
 }
-
-module.exports = DateTimeUtils;

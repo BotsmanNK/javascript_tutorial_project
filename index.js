@@ -1,9 +1,9 @@
-const DateTimeUtils = require('./utils/datetimeUtils');
-const DisplayUtils = require('./utils/displayUtils');
-const GeometryUtils = require('./utils/geometryUtils');
-const RandomUtils = require('./utils/randomUtils');
-const ReadLineUtils = require('./utils/readlineUtils');
-const TemperatureUtils = require('./utils/temperatureUtils')
+import { DateTimeUtils } from './utils/datetimeUtils.js';
+import { DisplayUtils } from './utils/displayUtils.js';
+import { GeometryUtils } from './utils/geometryUtils.js';
+import { RandomUtils } from './utils/randomUtils.js';
+import { ReadLineUtils } from './utils/readlineUtils.js';
+import { TemperatureUtils } from './utils/temperatureUtils.js';
 
    // Write a function to display the current day and time in the following format.  
    // Sample Output : Today is : Tuesday.
@@ -90,19 +90,24 @@ randomNumberUpToTen();
     //Write a function to calculate the days left before Christmas. 
 
 function daysLeftBeforeXmax() {
-    const dateNow = new Date;
-    const dateXmax = new Date (dateNow.getFullYear(), 11, 25);
+    const dateNow = new Date();
+    const currentYear = dateNow.getFullYear();
+    const currentMonth = dateNow.getMonth();
+    const currentDay = dateNow.getDay();
 
-    if (dateNow.getMonth() == 11 && dateNow.getDay > 25) {
-        dateXmax.setFullYear(dateXmax.getFullYear + 1);
+    // 11 is December, 25 is Christmas date
+    const dateXmax = new Date(currentYear, 11, 25);
+
+    if (currentMonth == 11 && currentDay > 25) {
+        DateTimeUtils.addYear(dateXmax);
     }
 
+    // oneDay in miliseconds
     const oneDay = 1000 * 60 * 60 * 24; 
 
     const daysLeft = Math.ceil((dateXmax.getTime() - dateNow.getTime()) / oneDay);
 
     DisplayUtils.displayDaysLeftBeforeXmax(daysLeft);
-    
 }
 
 daysLeftBeforeXmax();
@@ -122,7 +127,6 @@ function temperatureConverstion() {
 
     DisplayUtils.displayCelsiusToFarenheit(celsiusTemp, celsiusToFarenheit);
     DisplayUtils.displayFarenheitToCelsius(fahrenheitTemp, farenheitToCelsius);
-
 }
 
 temperatureConverstion();
@@ -134,4 +138,3 @@ function multiply(a, b){
 }
 
 let result = multiply(2, 2); 
-
