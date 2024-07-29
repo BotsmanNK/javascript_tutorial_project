@@ -6,6 +6,7 @@ import { RandomUtils } from './utils/randomUtils.js';
 import { ReadLineUtils } from './utils/readlineUtils.js';
 import { TemperatureUtils } from './utils/temperatureUtils.js';
 import { MathUtils } from './utils/mathUtils.js';
+import { StringUtils } from './utils/stringUtils.js';
 
    // Write a function to display the current day and time in the following format.  
    // Sample Output : Today is : Tuesday.
@@ -63,7 +64,7 @@ displayLeapYear();
 function sundayFirstJanuary() {
     let currentDate = new Date(2014, 0, 1);
     for (let i = 0; i <= 36; i++) {
-        
+
         //0 is Sunday
         if (currentDate.getDay() == 0) { 
             let year = currentDate.getFullYear();
@@ -122,7 +123,7 @@ daysLeftBeforeXmax();
 function temperatureConverstion() {
     const celsiusTemp = 60;
     const fahrenheitTemp = 45;
-    
+
     //2 is number of digits where to round
     const celsiusToFarenheit = MathUtils.round(TemperatureUtils.celsiusToFarenheit(celsiusTemp), 2);
     const farenheitToCelsius = MathUtils.round(TemperatureUtils.farenheitToCelsius(fahrenheitTemp), 2);
@@ -162,7 +163,7 @@ await differenceBetweenNumberAnd13();
 async function computeSumOfTwoIntegers() {
     const firstUserNumber = await ReadLineUtils.readFirstNumber();
     const secondUserNumber = await ReadLineUtils.readSecondNumber();
-    
+
     const sum = firstUserNumber + secondUserNumber;
     const status = firstUserNumber == secondUserNumber;
     const result = status ? sum * 3 : sum;
@@ -206,8 +207,8 @@ await pairNumbers();
 async function checkRangeStatus() {
     const userNumber = await ReadLineUtils.readNumberWithinRanges();
 
-    const isWithinFirstRange = userNumber >= 80 && userNumber <= 120;
-    const isWithinSecondRange = userNumber >= 380 && userNumber <= 420;
+    const isWithinFirstRange = MathUtils.withinRange(userNumber, 80, 120);
+    const isWithinSecondRange = MathUtils.withinRange(userNumber, 380, 420);
     const result = isWithinFirstRange || isWithinSecondRange;
 
     DisplayUtils.displayCheckRangeStatus(result);
@@ -230,8 +231,154 @@ async function checkNumberSigns() {
 
 await checkNumberSigns();
 
-function multiply(a, b){
-    return a * b;
+    //Write a function to create another string by adding "Py" in front of a given string. 
+    //If the given string begins with "Py" return the original string.  
+
+async function addPyToString() {
+    const userString = await ReadLineUtils.readUserString();
+
+    const checkStart = userString.substring(0, 2) === 'Py';
+    const result = checkStart ? userString : 'Py' + userString;
+    DisplayUtils.displayUserString(checkStart, result);
 }
 
-let result = multiply(2, 2); 
+await addPyToString();
+
+    //Write a function to remove a character at the specified position in a given string and return the modified string.  
+
+async function removeCharacterAtPostion() {
+    const userString = await ReadLineUtils.readUserStringDeletion();
+    const userPosition = await ReadLineUtils.readUserPosition();
+
+    const result = userString.substring(0, userPosition) + userString.substring(userPosition + 1, userString.length);
+
+    DisplayUtils.displayUserStringDeletion(result);
+}
+
+await removeCharacterAtPostion();
+
+    //Write a function to create a new string from a given string by changing the position of the first and last characters. 
+    //The string length must be broader than or equal to 1.  
+
+async function switchFirstAndLastCharacthersPosition() {
+    let resultString = await ReadLineUtils.readUserStringSwap();
+    const length = resultString.length;
+
+    const result = length != 0;
+    if (length > 1) {
+        const midString = resultString.substring(1, length - 1);
+        resultString = resultString.charAt(length - 1) + midString + resultString.charAt(0);
+    }
+
+    DisplayUtils.displayUserSwap(result, resultString);
+}
+
+await switchFirstAndLastCharacthersPosition();
+
+    //Write a function to create another string from a given string with the first character of the given string 
+    //added to the front and back.  
+
+async function addFirstCharatherToStartAndEnd() {
+    const userString = await ReadLineUtils.readUserStringFinEnd();
+
+    const firstCharacther = userString.substring(0, 1);
+    const resultString = firstCharacther + userString + firstCharacther;
+
+    DisplayUtils.displayUserFinEnd(resultString);
+}
+
+await addFirstCharatherToStartAndEnd();
+
+    //Write a function to check whether a given positive number is a multiple of 3 or 7.  
+
+async function checkingIfNumberIsMutiple() {
+    const userNumber = await ReadLineUtils.readUserNumberCheck();
+    if (userNumber < 0) {
+        DisplayUtils.displayErrorUserInputNumberCheck3And7();
+        return;
+    }
+
+    const userNumberCheck = userNumber % 3 === 0 || userNumber % 7 === 0;
+
+    DisplayUtils.displayUserNumberCheck3And7(userNumberCheck);
+}
+
+await checkingIfNumberIsMutiple();
+
+    //Write a function to create a string from a given string. 
+    //This is done by taking the last 3 characters and adding them at both the front and back.
+    //The string length must be 3 or more.
+
+async function addLastThreeCharactersToString() {
+    const userString = await ReadLineUtils.readUserStringThreeCharacters();
+
+    if (userString.lenght > 3) {
+        DisplayUtils.displayErrorUserInputLastThreeCharacter();
+        return;
+    }
+
+    const result = StringUtils.addingLastCharacters(userString, 3);
+
+    DisplayUtils.displayUserThreeCharacter(result);
+}
+
+await addLastThreeCharactersToString();
+
+    //Write a function to check whether a string starts with 'Java' if it does not otherwise.  
+
+async function checkStringStartsWithJava() {
+    const userString = await ReadLineUtils.readUserStringToCheckJava();
+
+    const status = userString.substring(0, 4) == `Java`;
+    
+    DisplayUtils.displayUserStatusStartJava(status);
+}
+
+await checkStringStartsWithJava();
+
+    //Write a function to check whether two given integer values are in the range 50..99 (inclusive). 
+    //Return true if either of them falls within the range.
+
+async function checkNumberIsWithinRange50And99() {
+    const userNumberOne = await ReadLineUtils.readUserFirstNumberIsWithinRange50And99();
+    const userNumberTwo = await ReadLineUtils.readUserSecondNumberIsWithinRange50And99();
+    
+    const checkFirstNumberRange = MathUtils.withinRange(userNumberOne, 50, 99);
+    const checkSecondNumberRange = MathUtils.withinRange(userNumberTwo, 50, 99);
+    const result = checkFirstNumberRange || checkSecondNumberRange;
+
+    DisplayUtils.displayTwoUserNumberIsWithinRange50And99(result);
+}
+
+await checkNumberIsWithinRange50And99();
+
+    //Write a function to check whether three given integer values are in the range 50..99 (inclusive). 
+    //Return true if one or more of them are in the specified range.
+
+async function checkIfThreeNumbersIsWithinRange50And99() {
+    const userNumberOne = await ReadLineUtils.readUserFirstNumberIsWithinRange50And99();
+    const userNumberTwo = await ReadLineUtils.readUserSecondNumberIsWithinRange50And99();
+    const userNumberThree = await ReadLineUtils.readUserThirdNumberIsWithinRange50And99();
+
+    const result = MathUtils.anyWithinRange([userNumberOne, userNumberTwo, userNumberThree], 50, 99);
+    
+    DisplayUtils.displayThreeUserNumberIsWithinRange50And99(result);
+}
+
+await checkIfThreeNumbersIsWithinRange50And99();
+
+    //Write a function to check whether a string "Script" appears at the 5th (index 4) position in a given string. 
+    //If "Script" appears in the string, return the string without "Script" otherwise return the original one.
+    
+async function checkIfScriptAppearsAtIndex() {
+    let resultString = await ReadLineUtils.readUserStringScript();
+
+    const result = resultString.substring(4, 10) == `Script`;
+    if (result) {
+        resultString = StringUtils.removeCharacters(resultString, 4, 10);
+    } 
+
+    DisplayUtils.displayStringHaveScript(result, resultString);
+}
+
+await checkIfScriptAppearsAtIndex();

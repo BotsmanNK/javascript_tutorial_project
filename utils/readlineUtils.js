@@ -53,6 +53,69 @@ export class ReadLineUtils {
     }
 
     static readSecondNumberSign() {
-        return this.readNumber(`Please enter a second number to check: `)
+        return this.readNumber(`Please enter a second number to check: `);
+    }
+
+    static readUserPosition() {
+        return this.readNumber(`Please enter a position to delete: `)
+    }
+
+    static readUserNumberCheck() {
+        return this.readNumber(`Please enter a number to check: `)
+    }
+
+    static readUserFirstNumberIsWithinRange50And99() {
+        return this.readNumber(`Please enter first number to check if it is within range of 50 and 99: `)
+    }
+
+    static readUserSecondNumberIsWithinRange50And99() {
+        return this.readNumber(`Please enter second number to check if it is within range of 50 and 99: `)
+    }
+
+    static readUserThirdNumberIsWithinRange50And99() {
+        return this.readNumber(`Please enter third number to check if it is within range of 50 and 99: `)
+    }
+
+    static readString(question) {
+        return new Promise((resolve) => {
+            const rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
+
+            rl.question(question, (answer) => {
+                const number = String(answer);
+                rl.close();
+                resolve(number);
+            });
+        });
+    }
+    
+    static readUserString() {
+        return this.readString(`Please enter a word: `);
+    }
+
+    static readUserStringDeletion() {
+        return this.readString(`Please enter your text: `);
+    }
+
+    static readUserStringSwap() {
+        return this.readString(`Please enter your text for swap: `);
+    }
+
+    static readUserStringFinEnd() {
+        return this.readString(`Please enter your word for adding first character to front and back: `);
+    }
+
+    static readUserStringThreeCharacters() { 
+        return this.readString(`Please enter your word to create a new one by adding three last characters: `);
+    }
+
+    static readUserStringToCheckJava() {
+        return this.readString(`Please enter your word to check if it starts with "Java": `);
+    }
+
+    static readUserStringScript() {
+        return this.readString(`Please enter your word to check if it contain Script: `);
     }
 }

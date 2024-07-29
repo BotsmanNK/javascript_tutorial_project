@@ -80,4 +80,75 @@ export class DisplayUtils {
             `Both numbers have same sign`;
         console.log(resultString);
     }
+
+    static displayUserString(status, string) {
+        const resultString = status ?
+            `Your word does start with Py your word is: ${string}` :
+            `Your word doesn't start with Py your word is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayUserStringDeletion(string) {
+        const resultString = `Your new word after deletion is ${string}`;
+        console.log(resultString);
+    }
+
+    static displayUserSwap(status, string) {
+        const resultString = status ?
+            `Word after chaning position of first and last character is: ${string}` :
+            `Error, no character found for swap, please try again.`;
+        console.log(resultString);
+    }
+
+    static displayUserFinEnd(string) {
+        const resultString = `Your word after adding first character to front and back is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayUserNumberCheck3And7(status) {
+        const resultString = status ?
+            `Your number is mutiple of 3 or 7` :
+            `Your number is not mutiple of 3 or 7`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserInputNumberCheck3And7() {
+        console.log(`Please enter a positive number`);
+    }
+
+    static displayUserThreeCharacter(string) {
+        console.log(`Your new word is ${string}`);
+    }
+
+    static displayErrorUserInputLastThreeCharacter() {
+        console.log(`Your word should be more than three characters`);
+    }
+
+    static displayUserStatusStartJava(status) {
+        const resultString = status ?
+            `Your word does start wtih Java` :
+            `Your word does not start with Java`;
+        console.log(resultString);
+    }
+
+    static displayTwoUserNumberIsWithinRange50And99(status) {
+        const resultString = status ?
+            `Either of them falls into a range of 50 and 99` :
+            `Neither of them falls into a range of 50 and 99`;
+        console.log(resultString);
+    }
+
+    static displayThreeUserNumberIsWithinRange50And99(status) {
+        const resultString = status ?
+            `Either of them falls into a range of 50 and 99` :
+            `Neither of them falls into a range of 50 and 99`;
+        console.log(resultString);
+    }
+
+    static displayStringHaveScript(status, string) {
+        const resultString = status ?
+            `Your string did include 'Script' in it, this is your new string: ${string}` :
+            `Your string did not include 'Script' in it, this is your original string: ${string}`;
+        console.log(resultString);
+    }
  }
