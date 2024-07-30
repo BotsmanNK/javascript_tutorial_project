@@ -312,7 +312,7 @@ await checkingIfNumberIsMutiple();
 async function addLastThreeCharactersToString() {
     const userString = await ReadLineUtils.readUserStringThreeCharacters();
 
-    if (userString.lenght > 3) {
+    if (userString.length > 3) {
         DisplayUtils.displayErrorUserInputLastThreeCharacter();
         return;
     }
@@ -382,3 +382,154 @@ async function checkIfScriptAppearsAtIndex() {
 }
 
 await checkIfScriptAppearsAtIndex();
+
+    //Write a function to find the largest of three given integers.  
+
+async function findLargestOfThreeGivenIntegers() {
+    const userNumberOne = await ReadLineUtils.readUserFirstNumberToCheckLargest();
+    const userNumberTwo = await ReadLineUtils.readUserSecondNumberToCheckLargest();
+    const userNumberThree = await ReadLineUtils.readUserThirdNumberToCheckLargest();
+    
+    const largestNumber = MathUtils.largestAmongThreeNumber(userNumberOne, userNumberTwo, userNumberThree);
+
+    DisplayUtils.displayLargestNumberAmongThree(largestNumber);
+}
+
+await findLargestOfThreeGivenIntegers();
+
+    //Write a function to find the closest value to 100 from two numerical values.  
+
+async function findClosestValueToOneHundredAmongTwoNumbers() {
+    const userNumberOne = await ReadLineUtils.readUserFirstNumberToCheckClosestToHundred();
+    const userNumberTwo = await ReadLineUtils.readUserSecondNumberToCheckClosestToHundred();
+
+    const resultNumber = MathUtils.closestNumberToNeededNumberAmongstTwoNumber(userNumberOne, userNumberTwo, 100)
+    DisplayUtils.displayClosestNumberToHundred(resultNumber);
+}
+
+await findClosestValueToOneHundredAmongTwoNumbers();
+
+    //Write a function to check whether two numbers are in the range 40..60 or 70..100 inclusive.  
+
+async function checkTwoNumberAreInRange40And60Or70And100() {
+    const userNumberOne = await ReadLineUtils.readFirstNumberOfTwoNumberAreInRange40And60Or70And100();
+    const userNumberTwo = await ReadLineUtils.readSecondNumberOfTwoNumberAreInRange40And60Or70And100();
+
+    const firstNumberOneCheck = MathUtils.anyWithinRange([userNumberOne, userNumberTwo], 40, 60);
+    const firstNumberTwoCheck = MathUtils.anyWithinRange([userNumberOne, userNumberTwo], 70, 100);
+
+    const result = firstNumberOneCheck && firstNumberTwoCheck;
+
+    DisplayUtils.displayTwoNumberAreWithin40And60Or70And100(result);
+}
+
+await checkTwoNumberAreInRange40And60Or70And100();
+
+    //Write a function to find the largest number from the two given positive integers. 
+    //The two numbers are in the range 40..60 inclusive.
+
+async function findLargestNumberFromTwoWithin40And60Range() {
+    const userNumberOne = await ReadLineUtils.readFirstNumberLargestWithinRangeOf40And60();
+    const userNumberTwo = await ReadLineUtils.readSecondNumberLargestWithinRangeOf40And60();
+
+    const rangeCheck = MathUtils.allWithinRange([userNumberOne, userNumberTwo], 40, 60);
+    const largestNumber = MathUtils.largestAmongTwoNumbers(userNumberOne, userNumberTwo);
+
+    DisplayUtils.displayLargestNumberAmongTwoWithin40And60(rangeCheck, largestNumber);
+}
+
+await findLargestNumberFromTwoWithin40And60Range();
+
+    //Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.  
+
+async function checkCharactherExistsBetween2ndAnd4thPositionInString() {
+    const userString = await ReadLineUtils.readUserStringToCheckCharacther();
+    const userCharacter = await ReadLineUtils.readUserCharacterInString();
+
+    const stringCheck = userString.substring(3, 4) == userCharacter;
+
+    DisplayUtils.displayUserCharacterExistsWithinUserString(stringCheck);
+}
+
+await checkCharactherExistsBetween2ndAnd4thPositionInString();
+
+    //Write a function that checks whether the last digit of three positive integers is the same.  
+
+async function checkLastDigitsOfThreePositiveIsSame() {
+    const firstNumber = await ReadLineUtils.readFirstNumberToCheckIfItHasSameLastDigit();
+    const secondNumber = await ReadLineUtils.readSecondNumberToCheckIfItHasSameLastDigit();
+    const thirdNumber = await ReadLineUtils.readThirdNumberToCheckIfItHasSameLastDigit();
+
+    const result = MathUtils.checkIfLastDigitIsPositiveForThreePositiveNumbers(firstNumber, secondNumber, thirdNumber);
+
+    DisplayUtils.displayThreePositiveNumberHaveSameLastDigit(result);
+}
+
+await checkLastDigitsOfThreePositiveIsSame();
+
+    //Write a function to produce a new string that has the first 3 characters in lower case from a given string. 
+    //If the string length is less than 3 convert all the characters to upper case.
+
+async function convertThreeCharactersToLowerCaseFromString() {
+    const userString = await ReadLineUtils.readUserStringToConvertToLowerCase();
+
+    const lengthCheck = userString.length > 3;
+
+    const userUpperCaseString = userString.toUpperCase();
+    const userStringLowerCase = StringUtils.changeToLowerCase(userString, 0, 2)
+
+    const resultString = lengthCheck ? userStringLowerCase : userUpperCaseString;
+
+    DisplayUtils.displayThreeCharactersToLowerCaseFromString(lengthCheck, resultString);
+}
+
+await convertThreeCharactersToLowerCaseFromString();
+
+    //Write a function to evaluate a student's total marks across various examinations and determine their grade. 
+    //The grading criteria are as follows:
+    //If the total marks fall within the range of 89 to 100 (inclusive), the student receives an A+ grade.
+    //If the examination is labeled as "Final-exam," the student will receive an A+ grade only if their total marks are 90 or greater.
+    //Assume that final examination means we pass 'true' as second parameter otherwise blank.
+    //If the student achieves an A+ grade, the program should return 'true'; otherwise, it should return 'false'.
+    
+async function evaluateStudentTotalMarksAcross() {
+    const stundentMark = await ReadLineUtils.readStundentMarkForExam();
+    const finalExam = await ReadLineUtils.readStudentFinalExam();
+
+    const checkFinalExam = finalExam == `yes`;
+    
+    const result = checkFinalExam ? stundentMark >= 90 : stundentMark >= 89;
+
+    DisplayUtils.displayStundentExam(result);
+}
+
+await evaluateStudentTotalMarksAcross();
+
+    //Write a function to compute the sum of the two given integers. 
+    //If the sum is in the range 50..80 return 65 otherwise return 80.
+
+async function computeSumOfNumberWithRange50And80() {
+    const firstNumber = await ReadLineUtils.readUserFirstNumberToCheckRange50And80();
+    const secondNumber = await ReadLineUtils.readUserSecondNumberToCheckRange50And80();
+
+    const sumCheck = (firstNumber + secondNumber) >= 50 && (firstNumber + secondNumber) <= 80;
+
+    DisplayUtils.displaySumOfTwoGivenNumberInRange50And80(sumCheck);
+}
+
+await computeSumOfNumberWithRange50And80();
+
+    //Write a function to check from two given integers whether one of them is 8 or their sum or difference is 8.  
+
+async function checkIfNumberOrSumOrDiffrenceIs8() {
+    const firstUserNumber = await ReadLineUtils.readUserFirstNumberOrSumOrDiffrenceIs8();
+    const secondUserNumber = await ReadLineUtils.readUserFirstNumberOrSumOrDiffrenceIs8();
+
+    const numberSum = firstUserNumber + secondUserNumber;
+    const numberDiff = Math.abs(firstUserNumber - secondUserNumber);
+    const numberCheck = firstUserNumber == 8 || secondUserNumber == 8 || numberSum == 8 || numberDiff == 8;
+
+    DisplayUtils.displayIfNumberOrSumOrDiffrenceIs8(numberCheck);
+}
+
+await checkIfNumberOrSumOrDiffrenceIs8();

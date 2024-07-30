@@ -15,4 +15,39 @@ export class MathUtils {
     static anyWithinRange(numbers, startRange, endRange) {
         return numbers.some((number) => this.withinRange(number, startRange, endRange));
     }
+
+    static largestAmongTwoNumbers(firstNumber, secondNumber) {
+        let checkNumber = 0;
+
+        let largestNumber = firstNumber > secondNumber ? checkNumber = firstNumber : checkNumber = secondNumber;
+        return largestNumber;
+    }
+
+    static largestAmongThreeNumber(firstNumber, secondNumber, thirdNumber) {
+        let largestNumber = 0;
+
+        const firstCheck = firstNumber > secondNumber ? largestNumber = firstNumber : largestNumber = secondNumber;
+        const secondCheck = thirdNumber > firstCheck ? largestNumber = thirdNumber : firstCheck;
+        return largestNumber;
+    }
+
+    static closestNumberToNeededNumberAmongstTwoNumber(firstNumber, secondNumber, breakPoint) {
+        const firstAbsolute = Math.abs(firstNumber - breakPoint);
+        const secondAbsolute = Math.abs(secondNumber - breakPoint);
+
+        const checkAbsolute = firstAbsolute > secondAbsolute;
+
+        const resultNumber = checkAbsolute ? firstAbsolute : secondAbsolute;
+        return resultNumber;
+    }
+
+    static checkIfLastDigitIsPositiveForThreePositiveNumbers(firstNumber, secondNumber, thirdNumber) {
+        const positiveCheck = firstNumber > 0 && secondNumber > 0 && thirdNumber > 0;
+
+        if (positiveCheck) {
+            return (firstNumber % 10 == secondNumber % 10) && (secondNumber % 10 == thirdNumber % 10);
+        } else {
+            return false;
+        }
+    }
 }

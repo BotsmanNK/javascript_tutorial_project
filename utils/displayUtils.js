@@ -151,4 +151,67 @@ export class DisplayUtils {
             `Your string did not include 'Script' in it, this is your original string: ${string}`;
         console.log(resultString);
     }
+
+    static displayLargestNumberAmongThree(number) {
+        const resultString = `Your largest number among three is ${number}`;
+        console.log(resultString);
+    }
+
+    static displayClosestNumberToHundred(number) {
+        const resultString = `Closest number to 100 is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayTwoNumberAreWithin40And60Or70And100(status) {
+        const resultString = status ?
+            `One of the numbers are with range of 40 and 60 or 70 and 100` :
+            `One of the numbers are not within range of 40 and 60 or 70 and 100`;
+        console.log(resultString);
+    }
+
+    static displayLargestNumberAmongTwoWithin40And60(status, number) {
+        const resultString = status ?
+            `The largest number within range is ${number}` :
+            `One of the numbers are not within range of 40 and 60`;
+        console.log(resultString);
+    }
+
+    static displayUserCharacterExistsWithinUserString(status) {
+        const resultString = status ?
+            `Your character exists between 2nd and 4th positions in a given string` :
+            `Your character does not exists between 2nd and 4th positions in a given string`
+        console.log(resultString)
+    }
+
+    static displayThreePositiveNumberHaveSameLastDigit(status) {
+        const resultString = status ?
+            `Three numbers do have same last digit` :
+            `Three numbers don't have same last digit`;
+        console.log(resultString);
+    }
+
+    static displayThreeCharactersToLowerCaseFromString(status, string) {
+        const resultString = status ?
+            `Your new string is: ${string}` :
+            `Your string length was less than three characters your new string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayStundentExam(status) {
+        const resultString = status;
+        console.log(resultString);
+    }
+
+    static displaySumOfTwoGivenNumberInRange50And80(status) {
+        const resultString = status ?
+            `65` : `80`;
+        console.log(resultString);
+    }
+
+    static displayIfNumberOrSumOrDiffrenceIs8(status) {
+        const resultString = status ?
+            `Either one of two numbers, their sum or difference was 8` :
+            `Neither one of two numbers, their sum or difference was 8`;
+        console.log(resultString);
+    }
  }

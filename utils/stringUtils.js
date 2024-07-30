@@ -16,4 +16,10 @@ export class StringUtils {
         characters.splice(startIndex, endIndex - startIndex);
         return characters.join('');
     }
+
+    static changeToLowerCase(string, startIndex, endIndex) {
+        const firstPart = string.substring(startIndex, endIndex + 1).toLowerCase();
+        const secondPart = string.substring(endIndex + 1, string.length);
+        return firstPart + secondPart;
+    }
 }
