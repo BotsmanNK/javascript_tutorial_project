@@ -390,7 +390,7 @@ async function findLargestOfThreeGivenIntegers() {
     const userNumberTwo = await ReadLineUtils.readUserSecondNumberToCheckLargest();
     const userNumberThree = await ReadLineUtils.readUserThirdNumberToCheckLargest();
     
-    const largestNumber = MathUtils.largestAmongThreeNumber(userNumberOne, userNumberTwo, userNumberThree);
+    const largestNumber = Math.max([userNumberOne, userNumberTwo, userNumberThree]);
 
     DisplayUtils.displayLargestNumberAmongThree(largestNumber);
 }
@@ -433,7 +433,7 @@ async function findLargestNumberFromTwoWithin40And60Range() {
     const userNumberTwo = await ReadLineUtils.readSecondNumberLargestWithinRangeOf40And60();
 
     const rangeCheck = MathUtils.allWithinRange([userNumberOne, userNumberTwo], 40, 60);
-    const largestNumber = MathUtils.largestAmongTwoNumbers(userNumberOne, userNumberTwo);
+    const largestNumber = Math.max([userNumberOne, userNumberTwo]);
 
     DisplayUtils.displayLargestNumberAmongTwoWithin40And60(rangeCheck, largestNumber);
 }
@@ -446,7 +446,7 @@ async function checkCharactherExistsBetween2ndAnd4thPositionInString() {
     const userString = await ReadLineUtils.readUserStringToCheckCharacther();
     const userCharacter = await ReadLineUtils.readUserCharacterInString();
 
-    const stringCheck = userString.substring(3, 4) == userCharacter;
+    const stringCheck = userString.substring(1, 4).includes(userCharacter);
 
     DisplayUtils.displayUserCharacterExistsWithinUserString(stringCheck);
 }
@@ -473,12 +473,11 @@ await checkLastDigitsOfThreePositiveIsSame();
 async function convertThreeCharactersToLowerCaseFromString() {
     const userString = await ReadLineUtils.readUserStringToConvertToLowerCase();
 
-    const lengthCheck = userString.length > 3;
+    const lengthCheck = userString.length > 3;    
 
-    const userUpperCaseString = userString.toUpperCase();
-    const userStringLowerCase = StringUtils.changeToLowerCase(userString, 0, 2)
-
-    const resultString = lengthCheck ? userStringLowerCase : userUpperCaseString;
+    const resultString = lengthCheck ?
+        StringUtils.changeToLowerCase(userString, 0, 2) :
+        userString.toUpperCase();
 
     DisplayUtils.displayThreeCharactersToLowerCaseFromString(lengthCheck, resultString);
 }
@@ -512,7 +511,8 @@ async function computeSumOfNumberWithRange50And80() {
     const firstNumber = await ReadLineUtils.readUserFirstNumberToCheckRange50And80();
     const secondNumber = await ReadLineUtils.readUserSecondNumberToCheckRange50And80();
 
-    const sumCheck = (firstNumber + secondNumber) >= 50 && (firstNumber + secondNumber) <= 80;
+    const sum = firstNumber + secondNumber;
+    const sumCheck = MathUtils.withinRange(sum, 50, 80);
 
     DisplayUtils.displaySumOfTwoGivenNumberInRange50And80(sumCheck);
 }
