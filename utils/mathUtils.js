@@ -34,4 +34,22 @@ export class MathUtils {
         
         return false;
     }
+    
+    static checkIfLastDigitIsSameForThreeNumbers(firstNumber, secondNumber, thirdNumber) {
+
+        return firstNumber % 10 == secondNumber % 10 && secondNumber % 10 == thirdNumber % 10;
+    }
+    
+    static checkIfLastDigitIsSameForTwoOfThreePositiveNumbers(firstNumber, secondNumber, thirdNumber) {
+        return firstNumber % 10 == secondNumber % 10 || secondNumber % 10 == thirdNumber % 10 ||
+            firstNumber % 10 == thirdNumber % 10;
+    
+    }
+
+    static checkIfThreeNumbersLessThanGivenNumber(firstNumber, secondNumber, thirdNumber, numberGreaterThan) {
+        return (
+        (firstNumber >= numberGreaterThan && (firstNumber < secondNumber || firstNumber < thirdNumber)) ||
+        (secondNumber >= numberGreaterThan && (secondNumber < firstNumber || secondNumber < thirdNumber)) ||
+        (thirdNumber >= numberGreaterThan && (thirdNumber < secondNumber || thirdNumber < firstNumber)));
+    }
 }

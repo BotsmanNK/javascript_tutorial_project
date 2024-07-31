@@ -2,18 +2,18 @@ import readline from 'readline';
 
 export class ReadLineUtils {
     static readNumber(question) {
-    return new Promise((resolve) => {
-        const rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-        });
+        return new Promise((resolve) => {
+            const rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
 
-        rl.question(question, (answer) => {
-            const number = Number(answer);
-            rl.close();
-            resolve(number);
+            rl.question(question, (answer) => {
+                const number = Number(answer);
+                rl.close();
+                resolve(number);
+            });
         });
-    });
     }
     
     static readNumberUpToTen() {
@@ -21,7 +21,7 @@ export class ReadLineUtils {
     }
 
     static readInitialNumber() {
-        return this.readNumber(`Please enter a number: `); 
+        return this.readNumber(`Please enter a number: `);
     }
 
     static readFirstNumber() {
@@ -78,7 +78,7 @@ export class ReadLineUtils {
 
     static readUserFirstNumberToCheckLargest() {
         return this.readNumber(`Please enter your first number to check which is the largest: `);
-    } 
+    }
 
     static readUserSecondNumberToCheckLargest() {
         return this.readNumber(`Please enter your second number to check which is the largest: `);
@@ -92,7 +92,8 @@ export class ReadLineUtils {
         return this.readNumber(`Please enter your first number to check closest to a hundred: `);
     }
 
-    static readUserSecondNumberToCheckClosestToHundred() {;
+    static readUserSecondNumberToCheckClosestToHundred() {
+        ;
         return this.readNumber(`Please enter your second number to check closest to a hundred: `);
     }
 
@@ -143,7 +144,63 @@ export class ReadLineUtils {
     static readUserSecondNumberOrSumOrDiffrenceIs8() {
         return this.readNumber(`Please enter your second number: `);
     }
+
+    static readUserFirstNumberCheckSetOfThree() {
+        return this.readNumber(`Please enter your first number to check: `);
+    }
+
+    static readUserSecondNumberCheckSetOfThree() {
+        return this.readNumber(`Please enter your second number to check: `);
+    }
+
+    static readUserThirdNumberCheckSetOfThree() {
+        return this.readNumber(`Please enter your third number to check: `)
+    }
+
+    static readUserFirstNumberStrictSoftMode() {
+        return this.readNumber('Please enter your first number to check mode: ')
+    }
+
+    static readUserSecondNumberStrictSoftMode() {
+        return this.readNumber('Please enter your second number to check mode: ')
+    }
+
+    static readUserThirdNumberStrictSoftMode() {
+        return this.readNumber('Please enter your third number to check mode: ')
+    }
+
+    static readFirstOfThreeNumberHaveSameRightmostDigit() {
+        return this.readNumber('Please enter your first number to check right digit: ');
+    }
+
+    static readSecondOfThreeNumberHaveSameRightmostDigit() {
+        return this.readNumber('Please enter your second number to check right digit: ');
+    }
     
+    static readThirdOfThreeNumberHaveSameRightmostDigit() {
+        return this.readNumber('Please enter your third number to check right digit: ')
+    }
+
+    static readFirstOfThreeNumberGreaterThan20() {
+        return this.readNumber('Please enter your first number to check: ');
+    }
+
+    static readSecondOfThreeNumberGreaterThan20() {
+        return this.readNumber('Please enter your second number to check: ');
+    }
+    
+    static readThirdOfThreeNumberGreaterThan20() {
+        return this.readNumber('Please enter your third number to check: ')
+    }
+
+    static readFirstNumberSumOrDiffIs15() {
+        return this.readNumber('Please enter your first number to check if it is 15: ')
+    }
+
+    static readSecondNumberSumOrDiffIs15() {
+        return this.readNumber('Please enter your second number to check if it is 15: ')
+    }
+
     static readString(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({

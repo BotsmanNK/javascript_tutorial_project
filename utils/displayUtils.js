@@ -214,4 +214,27 @@ export class DisplayUtils {
             `Neither one of two numbers, their sum or difference was 8`;
         console.log(resultString);
     }
+
+    static displayCheckSetThreeNumbers(result) {
+        console.log(`The final result is: ${result}`);
+    }
+
+    static displayCheckStrictSoftMode(result) {
+        console.log(`The three given number is increasing in: ${result}`);
+    }
+
+    static displayThreeNumbersHaveSameRightDigit(result) {
+        console.log(`The result of check shows that: ${result}`);
+    }
+
+    static displayThreeNumbersGreaterThan20(result) {
+        console.log(`After evaluation the result is: ${result}`);
+    }
+
+    static displayIfNumberOrSumOrDiffrenceIs15(status) {
+        const resultString = status ?
+            `Either one of two numbers, their sum or difference was 15` :
+            `Neither one of two numbers, their sum or difference was 15`;
+        console.log(resultString);
+    }
  }

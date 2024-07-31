@@ -523,7 +523,7 @@ await computeSumOfNumberWithRange50And80();
 
 async function checkIfNumberOrSumOrDiffrenceIs8() {
     const firstUserNumber = await ReadLineUtils.readUserFirstNumberOrSumOrDiffrenceIs8();
-    const secondUserNumber = await ReadLineUtils.readUserFirstNumberOrSumOrDiffrenceIs8();
+    const secondUserNumber = await ReadLineUtils.readUserSecondNumberOrSumOrDiffrenceIs8();
 
     const numberSum = firstUserNumber + secondUserNumber;
     const numberDiff = Math.abs(firstUserNumber - secondUserNumber);
@@ -533,3 +533,112 @@ async function checkIfNumberOrSumOrDiffrenceIs8() {
 }
 
 await checkIfNumberOrSumOrDiffrenceIs8();
+
+    //Write a function to check a set of three numbers; 
+    //if the three numbers are the same return 30; 
+    //otherwise return 20; and if two numbers are the same return 40.  
+    
+async function checkSetThreeNumber() {
+    const firstUserNumber = await ReadLineUtils.readUserFirstNumberCheckSetOfThree();
+    const secondUserNumber = await ReadLineUtils.readUserSecondNumberCheckSetOfThree();
+    const thirdUserNumber = await ReadLineUtils.readUserThirdNumberCheckSetOfThree();
+
+    const firstSecondNumberCheck = firstUserNumber == secondUserNumber;
+    const secondThirdNumberCheck = secondUserNumber == thirdUserNumber;
+    const firstThirdNumberCheck = firstUserNumber == thirdUserNumber;
+
+    let result = 20;
+    if (firstSecondNumberCheck && secondThirdNumberCheck) {
+        result = 30;
+    } else if (firstSecondNumberCheck || secondThirdNumberCheck || firstThirdNumberCheck) {
+        result = 40;
+    } 
+
+    DisplayUtils.displayCheckSetThreeNumbers(result);
+}
+
+await checkSetThreeNumber();
+
+    //Write a function to check whether three given numbers are increasing in strict or in soft mode.  
+    //Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+    
+async function checkThreeGivenNumberStrictSoftMode() {
+    const firstUserNumber = await ReadLineUtils.readUserFirstNumberStrictSoftMode();
+    const secondUserNumber = await ReadLineUtils.readUserSecondNumberStrictSoftMode();
+    const thirdUserNumber = await ReadLineUtils.readUserThirdNumberStrictSoftMode();
+
+    const strictModeCheck = firstUserNumber < secondUserNumber && secondUserNumber < thirdUserNumber;
+    const softModeCheck = secondUserNumber < thirdUserNumber;
+
+    let result = 'undefined';
+    if (strictModeCheck) {
+        result = 'Strict mode'
+    } else if (softModeCheck) {
+        result = 'Soft mode'
+    }
+
+    DisplayUtils.displayCheckStrictSoftMode(result);
+}
+
+await checkThreeGivenNumberStrictSoftMode();
+
+    //Write a function to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.  
+    
+async function checkThreeNumberHaveSameRightmostDigit() {
+    const firstNumber = await ReadLineUtils.readFirstOfThreeNumberHaveSameRightmostDigit();
+    const secondNumber = await ReadLineUtils.readSecondOfThreeNumberHaveSameRightmostDigit();
+    const thirdNumber = await ReadLineUtils.readThirdOfThreeNumberHaveSameRightmostDigit();
+
+    const allNumbersSame = MathUtils.checkIfLastDigitIsSameForThreeNumbers(firstNumber, secondNumber, thirdNumber);
+    const twoNumbersSame = MathUtils.checkIfLastDigitIsSameForTwoOfThreePositiveNumbers(firstNumber, secondNumber, thirdNumber);
+
+    let result = 'undefined'
+    if (allNumbersSame) {
+        result = 'all of them have same rightmost digit'
+    } else if (twoNumbersSame) {
+        result = 'two of them have same rightmost digit'
+    } else {
+        result = 'none of them have same rightmost digit'
+    }
+
+    DisplayUtils.displayThreeNumbersHaveSameRightDigit(result);
+}
+
+await checkThreeNumberHaveSameRightmostDigit();
+
+    //Write a function that evaluates three given integers to determine if any one of them is greater than or equal to 20 
+    //and less than at least one of the other two.  
+
+async function checkThreeGivenNumbersGreaterOrEqual20() {
+    const firstNumber = await ReadLineUtils.readFirstOfThreeNumberGreaterThan20();
+    const secondNumber = await ReadLineUtils.readSecondOfThreeNumberGreaterThan20();
+    const thirdNumber = await ReadLineUtils.readThirdOfThreeNumberGreaterThan20();
+
+    const check = MathUtils.checkIfThreeNumbersLessThanGivenNumber(firstNumber, secondNumber, thirdNumber, 20);
+
+    let result = 'undefined';
+    if (check) {
+        result = 'one of the numbers is at least 20 and less than at least one of the other numbers';
+    } else {
+        result = 'no number is at least 20 and less than at least one of the other numbers';
+    }
+
+    DisplayUtils.displayThreeNumbersGreaterThan20(result);
+}
+
+await checkThreeGivenNumbersGreaterOrEqual20()
+
+    //Write a function that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.  
+
+async function checkIfNumberSumOrDiffIs15() {
+    const firstUserNumber = await ReadLineUtils.readFirstNumberSumOrDiffIs15();
+    const secondUserNumber = await ReadLineUtils.readSecondNumberSumOrDiffIs15();
+
+    const numberSum = firstUserNumber + secondUserNumber;
+    const numberDiff = Math.abs(firstUserNumber - secondUserNumber);
+    const numberCheck = firstUserNumber == 15 || secondUserNumber == 15 || numberSum == 15 || numberDiff == 15;
+
+    DisplayUtils.displayIfNumberOrSumOrDiffrenceIs15(numberCheck);
+}
+
+await checkIfNumberSumOrDiffIs15();
