@@ -215,26 +215,55 @@ export class DisplayUtils {
         console.log(resultString);
     }
 
-    static displayCheckSetThreeNumbers(result) {
-        console.log(`The final result is: ${result}`);
+    static displayCheckSetThreeNumbers(status) {
+        console.log(`The final result is: ${status}`);
     }
 
-    static displayCheckStrictSoftMode(result) {
-        console.log(`The three given number is increasing in: ${result}`);
+    static displayCheckStrictSoftMode(status) {
+        console.log(`The three given number is increasing in: ${status}`);
     }
 
-    static displayThreeNumbersHaveSameRightDigit(result) {
-        console.log(`The result of check shows that: ${result}`);
+    static displayThreeNumbersHaveSameRightDigit(status) {
+        console.log(`The result of check shows that: ${status}`);
     }
 
-    static displayThreeNumbersGreaterThan20(result) {
-        console.log(`After evaluation the result is: ${result}`);
+    static displayThreeNumbersGreaterThan20(status) {
+        console.log(`After evaluation the result is: ${status}`);
     }
 
     static displayIfNumberOrSumOrDiffrenceIs15(status) {
         const resultString = status ?
             `Either one of two numbers, their sum or difference was 15` :
             `Neither one of two numbers, their sum or difference was 15`;
+        console.log(resultString);
+    }
+
+    static displayCheckNumberIsMultipleOf7Or11(status) {
+        const resultString = status ?
+            `One of the given number is multiple of 7 or 11` :
+            `Noone of the given number or both of them are multiple pf 7 or 11`;
+        console.log(resultString);
+    }
+
+    static displayNumberWithin40And10000(status, number) {
+        const resultString = status ?
+            `Given number ${number} is within 40 and 10000 range` :
+            `Given number ${number} is not within 40 and 10000 range`;
+        console.log(resultString);
+    }
+
+    static displayReverseString(string) {
+        const resultString = `Reversed string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayStringEachCharacterChanged(string) {
+        const resultString = `After changing your string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayCapitalizingEachWord(string) {
+        const resultString = `After capitalizing each word your string is: ${string}`;
         console.log(resultString);
     }
  }

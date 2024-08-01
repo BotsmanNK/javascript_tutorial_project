@@ -201,6 +201,18 @@ export class ReadLineUtils {
         return this.readNumber('Please enter your second number to check if it is 15: ')
     }
 
+    static readFirstNumberMultiple7Or11() {
+        return this.readNumber(`Please enter your first number to check if it multiple of 7 or 11: `)
+    }
+
+    static readSecondNumberMultiple7Or11() {
+        return this.readNumber(`Please enter your second number to check if it multiple of 7 or 11: `)
+    }
+
+    static readUserNumberCheckRange40To10000() {
+        return this.readNumber(`Please enter your number to check if it is in range from 40 to 10000: `)
+    }
+
     static readString(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({
@@ -258,5 +270,17 @@ export class ReadLineUtils {
 
     static readStudentFinalExam() {
         return this.readString(`Is student exam was final-exam (yes/no): `)
+    }
+
+    static readUserStringForReverse() {
+        return this.readString('Enter your text for reverse: ');
+    }
+
+    static readUserStringForReplacingEachCharacter() {
+        return this.readString(`Enter your text here for changing it: `)
+    }
+
+    static readUserStringForCapitalizeFirstLetterOfEachWord() {
+        return this.readString(`Enter your text here for capitalizing each word: `)
     }
 }

@@ -642,3 +642,74 @@ async function checkIfNumberSumOrDiffIs15() {
 }
 
 await checkIfNumberSumOrDiffIs15();
+
+    //Write a function to check two given non-negative integers if one (not both) is a multiple of 7 or 11.  
+
+async function checkTwoNumberIsMutipleOf7And11() {
+    const firstUserNumber = await ReadLineUtils.readFirstNumberMultiple7Or11();
+    const secondUserNumber = await ReadLineUtils.readSecondNumberMultiple7Or11();
+
+    const positiveCheck = firstUserNumber > 0 && secondUserNumber > 0;
+    const firstNumberMultiple = firstUserNumber % 7 == 0 || firstUserNumber % 11 == 0;
+    const secondNumberMultiple = secondUserNumber % 7 == 0 || secondUserNumber % 11 == 0;
+
+    let result;
+    if (!(firstNumberMultiple && secondNumberMultiple) && positiveCheck) {
+        result = firstNumberMultiple || secondNumberMultiple
+    } else {
+        result = false
+    }
+
+    DisplayUtils.displayCheckNumberIsMultipleOf7Or11(result);
+}
+
+await checkTwoNumberIsMutipleOf7And11();
+
+    //Write a function to check whether a given number exists in the range 40..10000.  
+    //For example 40 presents in 40 and 4000
+    
+async function checkIfGivenNumberExistsInRange40To10000() {
+    const userNumber = await ReadLineUtils.readUserNumberCheckRange40To10000();
+
+    const result = MathUtils.withinRange(userNumber, 40, 10000);
+
+    DisplayUtils.displayNumberWithin40And10000(result, userNumber);
+}
+
+await checkIfGivenNumberExistsInRange40To10000();
+
+    //Write a function to reverse a given string.  
+    
+async function reverseString() {
+    const userString = await ReadLineUtils.readUserStringForReverse();
+
+    const resultString = StringUtils.reverseString(userString);
+
+    DisplayUtils.displayReverseString(resultString);
+}
+
+await reverseString();
+
+    //Write a function to replace every character in a given string with the character following it in the alphabet.  
+    
+async function replaceEveryCharacterInStringWithCharacterFollowingIt() {
+    const userString = await ReadLineUtils.readUserStringForReplacingEachCharacter();
+
+    const resultString = StringUtils.changingEachCharacter(userString);
+
+    DisplayUtils.displayStringEachCharacterChanged(resultString);
+}
+
+await replaceEveryCharacterInStringWithCharacterFollowingIt();
+
+    //Write a function to capitalize the first letter of each word in a given string.  
+    
+async function capitalizeFirstLetterOfEachWord() {
+    const userString = await ReadLineUtils.readUserStringForCapitalizeFirstLetterOfEachWord();
+
+    const resultString = StringUtils.capitalizingEachWord(userString);
+
+    DisplayUtils.displayCapitalizingEachWord(resultString);
+}
+
+await capitalizeFirstLetterOfEachWord();
