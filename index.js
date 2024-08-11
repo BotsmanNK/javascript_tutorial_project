@@ -312,7 +312,7 @@ await checkingIfNumberIsMutiple();
 async function addLastThreeCharactersToString() {
     const userString = await ReadLineUtils.readUserStringThreeCharacters();
 
-    if (userString.length > 3) {
+    if (userString.length < 3) {
         DisplayUtils.displayErrorUserInputLastThreeCharacter();
         return;
     }
@@ -706,10 +706,143 @@ await replaceEveryCharacterInStringWithCharacterFollowingIt();
     
 async function capitalizeFirstLetterOfEachWord() {
     const userString = await ReadLineUtils.readUserStringForCapitalizeFirstLetterOfEachWord();
-
+    
     const resultString = StringUtils.capitalizingEachWord(userString);
 
     DisplayUtils.displayCapitalizingEachWord(resultString);
 }
 
 await capitalizeFirstLetterOfEachWord();
+
+    //Write a JavaScript application that transforms a provided numerical value into hours and minutes.  
+
+async function convertNumberToHoursAndMinutes() {
+    const userNumber = await ReadLineUtils.readUserNumberConvertNumberToHoursAndMinutes();
+
+    const hours = Math.floor(userNumber / 60);
+    const minutes = userNumber % 60;
+
+    DisplayUtils.displayConvertNumberToHoursAndMinutes(hours, minutes);
+}
+
+await convertNumberToHoursAndMinutes();
+
+    //Write a function to convert letters of a given string alphabetically.  
+    
+async function convertLettersAlphabetically() {
+    const userString = await ReadLineUtils.readUserStringToConvertAlphabetically();
+
+    const resultString = userString.split('').sort().join('');
+
+    DisplayUtils.displayConvertLettersAlphabetically(resultString);
+}
+
+await convertLettersAlphabetically();
+
+    //Write a function to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string. 
+
+async function checkCharactersAAndBAreSeparatedBy3Places() {
+    const userString = await ReadLineUtils.readUserStringCheckCharactersAAndBAreSeparatedBy3Places();
+
+    const check = (/a...b/).test(userString) || (/b...a/).test(userString);
+
+    DisplayUtils.displayCheckCharactersAAndBAreSeparatedBy3Places(check);
+}
+
+await checkCharactersAAndBAreSeparatedBy3Places();
+
+    //Write a function to count the number of vowels in a given string.
+    
+async function countVowelsInString() {
+    const userString = await ReadLineUtils.readUserStringCountVowels();
+
+    const result = userString.replaceAll(/[^aeiou]/g, '').length;
+
+    DisplayUtils.displayCountVowels(result);
+}
+
+await countVowelsInString();
+
+    //Write a function to check whether a given string contains an equal number of p's and t's.  
+    
+async function checkStringContainsEqualNumberOfPAndT() {
+    const userString = await ReadLineUtils.readUserStringCheckStringContainsEqualNumberOfPAndT();
+
+    const numberOfP = userString.replaceAll(/[^p]/g, '').length;
+    const numberOfT = userString.replaceAll(/[^t]/g, '').length;
+
+    const result = numberOfP == numberOfT;
+
+    DisplayUtils.displayUserStringCheckStringContainsEqualNumberOfPAndT(result);
+}
+
+await checkStringContainsEqualNumberOfPAndT();
+
+    //Write a function to divide two positive numbers and return the result as string with properly formatted commas.
+    
+async function divideTwoPositiveNumbersAndReturnResultProperly() {
+    const firstUserNumber = await ReadLineUtils.readFirstUserNumberToDivide();
+    const secondUserNumber = await ReadLineUtils.readSecondUserNumberToDivide();
+
+    const result = firstUserNumber / secondUserNumber;
+    const formattedResult = result.toLocaleString(undefined, {maximumFractionDigits: 2});
+    
+    DisplayUtils.displayDivideTwoNumberAndReturnResultProperply(formattedResult);
+}
+
+await divideTwoPositiveNumbersAndReturnResultProperly();
+
+    //Write a function to create one string of specified copies (positive numbers) of a given string.  
+       
+async function createOneStringOfCopiesOfGivenString() {
+    const userString = await ReadLineUtils.readUserStringOfCopiesOfGivenString();
+    const userNumber = await ReadLineUtils.readUserNumberAmountOfCopies();
+
+    const result = userString.repeat(userNumber);
+
+    DisplayUtils.displayStringMutipledNumberOfTimes(result);
+}
+
+await createOneStringOfCopiesOfGivenString();
+
+    //Write a function to create an updated string of 4 copies of the last 3 characters of a given original string. 
+    //The string length must be 3 and above. 
+    
+async function createFourCopiesOfLastThreeCharactersOfString() {
+    const userString = await ReadLineUtils.readUserStringToCreateFourCopiesOfLastThreeCharacters();
+
+    if (userString.length < 3) {
+        DisplayUtils.displayErrorUserInputLastThreeCharacter();
+        return;
+    }
+    
+    const result = userString.substring(userString.length - 3, userString.length).repeat(4)
+
+    DisplayUtils.displayStringMutipledLastThreeCharacters(result);
+}
+
+await createFourCopiesOfLastThreeCharactersOfString();
+
+    //Write a function to extract the first half of a even string.
+    
+async function extractFirstHalfOfEvenString() {
+    const userString = await ReadLineUtils.readUserStringExtractFirstHalfOfEvenString();
+
+    const resultString = StringUtils.checkIfStringIsEvenAndExtractFirstHalf(userString);
+
+    DisplayUtils.displayCheckStringIsEvenAndExtractFirstHalf(resultString);
+}
+
+await extractFirstHalfOfEvenString();
+
+    //Write a function to create a new string without the first and last characters of a given string. 
+    
+async function createNewStringWithoutFirstAndLastCharacters() {
+    const userString = await ReadLineUtils.readUserStringCreateNewStringWithoutFirstAndLastCharacters();
+
+    const resultString = StringUtils.deleteFirstAndLastCharacters(userString);
+
+    DisplayUtils.displayDeleteFirstAndLastCharacters(resultString);
+}
+
+await createNewStringWithoutFirstAndLastCharacters();

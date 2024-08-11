@@ -266,4 +266,58 @@ export class DisplayUtils {
         const resultString = `After capitalizing each word your string is: ${string}`;
         console.log(resultString);
     }
+
+    static displayConvertNumberToHoursAndMinutes(hours, minutes) {
+        const resultString = `Your number was converted to ${hours} hours and ${minutes} minutes`;
+        console.log(resultString);
+    }
+
+    static displayConvertLettersAlphabetically(string) {
+        const resultString = `Your new text after converting it alphabetically is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayCheckCharactersAAndBAreSeparatedBy3Places(status) {
+        const resultString = status ?
+            `Characters A and B are separated by 3 places` :
+            `Characters A and B are not separated by 3 places`;
+        console.log(resultString);
+    }
+
+    static displayCountVowels(number) {
+        const resultString = `There are ${number} vowels in a given text`;
+        console.log(resultString);
+    }
+
+    static displayUserStringCheckStringContainsEqualNumberOfPAndT(status) {
+        const resultString = status ?
+            `Given string does contains an equal number of p's and t's` :
+            `Given string does not contains an equal number of p's and t's`;
+        console.log(resultString);
+    }
+
+    static displayDivideTwoNumberAndReturnResultProperply(string) {
+        const resultString = `Your number after dividing and properly put commas is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayStringMutipledNumberOfTimes(string) {
+        const resultString = `After multiplying new string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayStringMutipledLastThreeCharacters(string) {
+        const resultString = `After multiplying last three characters of your string four times, your new string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayCheckStringIsEvenAndExtractFirstHalf(string) {
+        const resultString = `After extracting first half of your even string, first half is: ${string} `;
+        console.log(resultString);
+    }
+
+    static displayDeleteFirstAndLastCharacters(string) {
+        const resultString = `After deleting first and last characters, your new string is: ${string}`;
+        console.log(resultString);
+    }
  }

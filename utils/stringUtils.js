@@ -51,13 +51,32 @@ export class StringUtils {
         return result.join('');
     }
 
- static capitalizingEachWord(string) {
-     let words = string.split(" ");
-     
+    static capitalizingEachWord(string) {
+        const words = string.split(" ");
+    
         for (let i = 0; i < words.length; i++) {
+            if (words[i]) { 
             words[i] = words[i][0].toUpperCase() + words[i].substr(1);
         }
+    }
     
-        return words.join(" ");
+    return words.join(" ");
+    }
+
+    static checkIfStringIsEvenAndExtractFirstHalf(string) {
+    
+        let resultString;
+    
+        if (string.length % 2 == 0) {
+            let resultString = string.slice(0, string.length / 2);
+            return resultString
+        } else {
+            let resultString = `your string is not even`;
+            return resultString;
+        }
+    }
+
+    static deleteFirstAndLastCharacters(string) {
+        return string.substring(1, string.length - 1);
     }
 }

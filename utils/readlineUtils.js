@@ -154,19 +154,19 @@ export class ReadLineUtils {
     }
 
     static readUserThirdNumberCheckSetOfThree() {
-        return this.readNumber(`Please enter your third number to check: `)
+        return this.readNumber(`Please enter your third number to check: `);
     }
 
     static readUserFirstNumberStrictSoftMode() {
-        return this.readNumber('Please enter your first number to check mode: ')
+        return this.readNumber('Please enter your first number to check mode: ');
     }
 
     static readUserSecondNumberStrictSoftMode() {
-        return this.readNumber('Please enter your second number to check mode: ')
+        return this.readNumber('Please enter your second number to check mode: ');
     }
 
     static readUserThirdNumberStrictSoftMode() {
-        return this.readNumber('Please enter your third number to check mode: ')
+        return this.readNumber('Please enter your third number to check mode: ');
     }
 
     static readFirstOfThreeNumberHaveSameRightmostDigit() {
@@ -190,27 +190,43 @@ export class ReadLineUtils {
     }
     
     static readThirdOfThreeNumberGreaterThan20() {
-        return this.readNumber('Please enter your third number to check: ')
+        return this.readNumber('Please enter your third number to check: ');
     }
 
     static readFirstNumberSumOrDiffIs15() {
-        return this.readNumber('Please enter your first number to check if it is 15: ')
+        return this.readNumber('Please enter your first number to check if it is 15: ');
     }
 
     static readSecondNumberSumOrDiffIs15() {
-        return this.readNumber('Please enter your second number to check if it is 15: ')
+        return this.readNumber('Please enter your second number to check if it is 15: ');
     }
 
     static readFirstNumberMultiple7Or11() {
-        return this.readNumber(`Please enter your first number to check if it multiple of 7 or 11: `)
+        return this.readNumber(`Please enter your first number to check if it multiple of 7 or 11: `);
     }
 
     static readSecondNumberMultiple7Or11() {
-        return this.readNumber(`Please enter your second number to check if it multiple of 7 or 11: `)
+        return this.readNumber(`Please enter your second number to check if it multiple of 7 or 11: `);
     }
 
     static readUserNumberCheckRange40To10000() {
-        return this.readNumber(`Please enter your number to check if it is in range from 40 to 10000: `)
+        return this.readNumber(`Please enter your number to check if it is in range from 40 to 10000: `);
+    }
+
+    static readUserNumberConvertNumberToHoursAndMinutes() {
+        return this.readNumber(`Enter a number of minutes to convert to hours and minutes: `);
+    }    
+
+    static readFirstUserNumberToDivide() {
+        return this.readNumber(`Enter your first number: `);
+    }
+
+    static readSecondUserNumberToDivide() {
+        return this.readNumber(`Enter your second number: `);
+    }
+
+    static readUserNumberAmountOfCopies() {
+        return this.readNumber(`Enter a number of times you want to multiple string: `)
     }
 
     static readString(question) {
@@ -257,19 +273,19 @@ export class ReadLineUtils {
     }
 
     static readUserStringToCheckCharacther() {
-        return this.readString(`Please enter your string to check a specified character: `)
+        return this.readString(`Please enter your string to check a specified character: `);
     }
 
     static readUserCharacterInString() {
-        return this.readString(`Please enter your specified character to check: `)
+        return this.readString(`Please enter your specified character to check: `);
     }
 
     static readUserStringToConvertToLowerCase() {
-        return this.readString(`Please enter your text to convert first three characters to lower case: `)
+        return this.readString(`Please enter your text to convert first three characters to lower case: `);
     }
 
     static readStudentFinalExam() {
-        return this.readString(`Is student exam was final-exam (yes/no): `)
+        return this.readString(`Is student exam was final-exam (yes/no): `);
     }
 
     static readUserStringForReverse() {
@@ -277,10 +293,42 @@ export class ReadLineUtils {
     }
 
     static readUserStringForReplacingEachCharacter() {
-        return this.readString(`Enter your text here for changing it: `)
+        return this.readString(`Enter your text here for changing it: `);
     }
 
     static readUserStringForCapitalizeFirstLetterOfEachWord() {
-        return this.readString(`Enter your text here for capitalizing each word: `)
+        return this.readString(`Enter your text here for capitalizing each word: `);
+    }
+
+    static readUserStringToConvertAlphabetically() {
+        return this.readString(`Enter your text to change it alphabetically: `);
+    }
+
+    static readUserStringCheckCharactersAAndBAreSeparatedBy3Places() {
+        return this.readString(`Enter your text to check if a and b are separated by 3 places: `);
+    }
+
+    static readUserStringCountVowels() {
+        return this.readString(`Enter your text to count vowels: `);
+    }
+
+    static readUserStringCheckStringContainsEqualNumberOfPAndT() {
+        return this.readString(`Enter your text to check if it contains equal number of P and T: `)
+    }
+
+    static readUserStringOfCopiesOfGivenString() {
+        return this.readString(`Enter your string: `);
+    }
+
+    static readUserStringToCreateFourCopiesOfLastThreeCharacters() {
+        return this.readString(`Enter your string to create four copies of last characters: `)
+    }
+
+    static readUserStringExtractFirstHalfOfEvenString() {
+        return this.readString(`Enter your even string to extract first half of it: `)
+    }
+
+    static readUserStringCreateNewStringWithoutFirstAndLastCharacters() {
+        return this.readString(`Enter your word to delete first and last character: `)
     }
 }
