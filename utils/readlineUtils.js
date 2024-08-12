@@ -229,6 +229,10 @@ export class ReadLineUtils {
         return this.readNumber(`Enter a number of times you want to multiple string: `)
     }
 
+    static readUserNumberCreateStringUsingFirstAndLastGivenNumberOfCharacters() {
+        return this.readNumber(`Enter a number to create a new string: `)
+    }
+
     static readString(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({
@@ -330,5 +334,68 @@ export class ReadLineUtils {
 
     static readUserStringCreateNewStringWithoutFirstAndLastCharacters() {
         return this.readString(`Enter your word to delete first and last character: `)
+    }
+
+    static readFirstUserStringConcanateTwoStringsExceptFirstCharacter() {
+        return this.readString(`Enter first string here: `);
+    }
+
+    static readSecondUserStringConcanateTwoStringsExceptFirstCharacter() {
+        return this.readString(`Enter second string here: `)
+    }
+
+    static readUserStringToMoveLastThreeCharactersToStart() {
+        return this.readString(`Enter you text to add last three characters to start: `)
+    }
+
+    static readUserStringCreateStringUsingMiddleThreeCharactersOfOddString() {
+        return this.readString(`Enter your text to create a new string using middle three characters: `)
+    }
+
+    static readFirstUserStringConcanateTwoStringsIfLengthDoesNotMatch() {
+        return this.readString(`Enter your first string here to concanate: `)
+    }
+
+    static readSecondUserStringConcanateTwoStringsIfLengthDoesNotMatch() {
+        return this.readString(`Enter your second string here to concanate: `)
+    }
+
+    static readUserStringCheckStringEndsWithScript() {
+        return this.readString(`Enter your string to check if it ends with 'Script': `)
+    }
+
+    static readUserStringCheckCityNameIfBeginsWithLosOrNew() {
+        return this.readString(`Enter your city: `);
+    }
+
+    static readUserStringCreateNewStringIfStringStartOrEndsWithP() {
+        return this.readString(`Enter your string to check if it starts or ends with 'P': `)
+    }
+
+    static readUserStringCreateStringUsingFirstAndLastGivenNumberOfCharacters() {
+        return this.readString(`Enter your string here to create a new: `)
+    }
+
+    static readNumberArray(question) {
+        return new Promise((resolve) => {
+            const rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
+
+            rl.question(question, (answer) => {
+                const numberArray = answer.split(',').map(Number);
+                rl.close();
+                resolve(numberArray);
+            });
+        })
+    }
+
+    static readArrayOfThreeNumbersToGetSum() {
+        return this.readNumberArray(`Enter array of three numbers to get sum: `)
+    }
+
+    static readArrayOfThreeNumbersToRotateLeft() {
+        return this.readNumberArray(`Enter array of three number to rotate left: `)
     }
 }

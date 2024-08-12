@@ -7,6 +7,7 @@ import { ReadLineUtils } from './utils/readlineUtils.js';
 import { TemperatureUtils } from './utils/temperatureUtils.js';
 import { MathUtils } from './utils/mathUtils.js';
 import { StringUtils } from './utils/stringUtils.js';
+import { ArrayUtils } from './utils/arrayUtils.js';
 
    // Write a function to display the current day and time in the following format.  
    // Sample Output : Today is : Tuesday.
@@ -313,7 +314,7 @@ async function addLastThreeCharactersToString() {
     const userString = await ReadLineUtils.readUserStringThreeCharacters();
 
     if (userString.length < 3) {
-        DisplayUtils.displayErrorUserInputLastThreeCharacter();
+        DisplayUtils.displayErrorUserInputShouldBeMoreThanThreeCharacter();
         return;
     }
 
@@ -812,7 +813,7 @@ async function createFourCopiesOfLastThreeCharactersOfString() {
     const userString = await ReadLineUtils.readUserStringToCreateFourCopiesOfLastThreeCharacters();
 
     if (userString.length < 3) {
-        DisplayUtils.displayErrorUserInputLastThreeCharacter();
+        DisplayUtils.displayErrorUserInputShouldBeMoreThanThreeCharacter();
         return;
     }
     
@@ -846,3 +847,166 @@ async function createNewStringWithoutFirstAndLastCharacters() {
 }
 
 await createNewStringWithoutFirstAndLastCharacters();
+
+    //Write a function to concatenate two strings except for their first character.  
+    
+async function concatenateTwoStringsExceptFirstCharacter() {
+    const firstUserString = await ReadLineUtils.readFirstUserStringConcanateTwoStringsExceptFirstCharacter();
+    const secondUserString = await ReadLineUtils.readSecondUserStringConcanateTwoStringsExceptFirstCharacter();
+
+    const resultString = StringUtils.concatenateTwoStringExceptFirstCharacter(firstUserString, secondUserString);
+
+    DisplayUtils.displayConcatenateTwoStringExceptFirstCharacter(resultString);
+}
+
+await concatenateTwoStringsExceptFirstCharacter();
+
+    //Write a function to move the last three characters to the start of a given string. 
+    //The string length must be greater than or equal to three.  
+    
+async function moveLastThreeCharactersToStart() {
+    const userString = await ReadLineUtils.readUserStringToMoveLastThreeCharactersToStart();
+
+    if (userString.length < 3) {
+        DisplayUtils.displayErrorUserInputShouldBeMoreThanThreeCharacter();
+        return;
+    }
+    
+    const resultString = StringUtils.moveNumberOfLastCharactersToStart(userString, 3);
+
+    DisplayUtils.displayMoveLastThreeCharactersToStart(resultString);
+}
+
+await moveLastThreeCharactersToStart()
+
+    //Write a function to create a string using the middle three characters of a given string of odd length. 
+    //The string length must be greater than or equal to three.  
+    
+async function createStringUsingMiddleThreeCharactersOfOddString() {
+    const userString = await ReadLineUtils.readUserStringCreateStringUsingMiddleThreeCharactersOfOddString();
+
+    if (userString.length <= 3) {
+        DisplayUtils.displayErrorUserInputShouldBeMoreThanThreeCharacter();
+        return;
+    }
+
+    const oddCheck = userString.length % 2 !== 0;
+
+    const resultString = StringUtils.createStringUsingMiddleNumberOfCharactersOfOddString(userString, 3);
+
+    DisplayUtils.displayCreateStringUsingMiddleThreeCharactersOfOddString(oddCheck, resultString);
+}
+
+await createStringUsingMiddleThreeCharactersOfOddString();
+
+    //Write a function to concatenate two strings and return the result. 
+    //If the length of the strings does not match, then remove the characters from the longer string.  
+    
+async function concatenateTwoStringsIfLengthDoesNotMatch() {
+    const firstUserString = await ReadLineUtils.readFirstUserStringConcanateTwoStringsIfLengthDoesNotMatch();
+    const secondUserString = await ReadLineUtils.readSecondUserStringConcanateTwoStringsIfLengthDoesNotMatch();
+
+    const resultString = StringUtils.concatenateTwoStringIfLengthDoesNotMatch(firstUserString, secondUserString);
+
+    DisplayUtils.displayConcatenateTwoStringIfLengthDoesNotMatch(resultString);
+}
+
+await concatenateTwoStringsIfLengthDoesNotMatch();
+
+    //Write a function to test whether a string ends with "Script". 
+    //The string length must be greater than or equal to 6.     
+        
+async function checkStringEndsWtihScript() {
+    const userString = await ReadLineUtils.readUserStringCheckStringEndsWithScript();
+
+    if (userString.length < 6) {
+        DisplayUtils.displayErrorUserInputShouldBeMoreThanSixCharacter();
+        return;
+    }
+
+    const result = userString.substring(userString.length - 6, userString.length) == 'Script';
+
+    DisplayUtils.displayCheckStringEndsWtihScript(result);
+}
+
+await checkStringEndsWtihScript();
+
+    //Write a function to display the city name if the string begins with "Los" or "New" otherwise return blank. 
+    
+async function checkCityNameIfBeginsWithLosOrNew() {
+    const userString = await ReadLineUtils.readUserStringCheckCityNameIfBeginsWithLosOrNew();
+    
+    const result = userString.substring(0, 3) == 'Los' || userString.substring(0, 3) == 'New';
+
+    DisplayUtils.displayCheckCityNameIfBeginsWithLosOrNew(result);
+}
+
+await checkCityNameIfBeginsWithLosOrNew();
+
+    //Write a function to create a new string from a given string. 
+    //This program removes the first and last characters of the string if the first or last character is 'P'.
+    //Return the original string if the condition is not satisfied.  
+    
+async function createNewStringIfStringStartOrEndsWithP() {
+    const userString = await ReadLineUtils.readUserStringCreateNewStringIfStringStartOrEndsWithP();
+
+    let resultString;
+    if (userString.charAt(0) == 'P') {
+        resultString = userString.substring(1, userString.length - 1);
+    } else if (userString.charAt(userString.length - 1) == 'P') {
+        resultString = userString.substring(0, userString.length - 1);
+    } else {
+        resultString = userString;
+    }
+
+    DisplayUtils.displayCreateNewStringIfStringStartOrEndsWithP(resultString);
+}
+
+await createNewStringIfStringStartOrEndsWithP();
+
+    //Write a function to create a new string using the first and last n characters from a given string.
+    //The string length must be larger than or equal to n. 
+    
+async function createNewStringUsingFirstAndLastGivenNumberOfCharacters() {
+    const userString = await ReadLineUtils.readUserStringCreateStringUsingFirstAndLastGivenNumberOfCharacters();
+    const userNumber = await ReadLineUtils.readUserNumberCreateStringUsingFirstAndLastGivenNumberOfCharacters();
+
+    if (userString.length <= userNumber) {
+        DisplayUtils.displayErrorUserInputShouldBeMoreThanGivenNumberOfCharacters(userNumber);
+        return;
+    }
+
+    const firstStringPart = userString.substring(0, userNumber);
+    const secondStringPart = userString.substring(userString.length - userNumber, userString.length);
+
+    const resultString = firstStringPart + secondStringPart;
+
+    DisplayUtils.displayCreateNewStringUsingFirstAndLastGivenNumberOfCharacters(resultString);
+}
+
+await createNewStringUsingFirstAndLastGivenNumberOfCharacters();
+
+    //Write a function to compute the sum of three elements of a given array of integers of length 3.  
+    
+async function computeSumOfThreeElementsOfArrayOfLengthThree() {
+    const userArray = await ReadLineUtils.readArrayOfThreeNumbersToGetSum();
+
+    const result = ArrayUtils.sumOfThreeElementsOfArrayOfLengthThree(userArray);
+
+    DisplayUtils.displayComputeSumOfThreeElementsOfArrayOfLengthThree(result);
+
+}
+
+await computeSumOfThreeElementsOfArrayOfLengthThree();
+
+    //Write a function to rotate the elements left in a given array of integers of length 3.  
+
+async function rotateElementsLeftInGivenArrayOfLengthThree() {
+    const userArray = await ReadLineUtils.readArrayOfThreeNumbersToRotateLeft();
+
+    const result = ArrayUtils.rotateElementsLeftOfLengthThree(userArray);
+
+    DisplayUtils.displayRotateElementsLeftInGivenArrayOfLengthThree(result);
+}
+
+await rotateElementsLeftInGivenArrayOfLengthThree();

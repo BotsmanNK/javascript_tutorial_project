@@ -120,8 +120,16 @@ export class DisplayUtils {
         console.log(`Your new word is ${string}`);
     }
 
-    static displayErrorUserInputLastThreeCharacter() {
+    static displayErrorUserInputShouldBeMoreThanThreeCharacter() {
         console.log(`Your word should be more than three characters`);
+    }
+
+    static displayErrorUserInputShouldBeMoreThanSixCharacter() {
+        console.log(`Your word should be more than six characters`);
+    }
+
+    static displayErrorUserInputShouldBeMoreThanGivenNumberOfCharacters(number) {
+        console.log(`Your word should be more than ${number} characters`);
     }
 
     static displayUserStatusStartJava(status) {
@@ -320,4 +328,59 @@ export class DisplayUtils {
         const resultString = `After deleting first and last characters, your new string is: ${string}`;
         console.log(resultString);
     }
- }
+
+    static displayConcatenateTwoStringExceptFirstCharacter(string) {
+        const resultString = `After concatenation two strings except first character, new string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayMoveLastThreeCharactersToStart(string) {
+        const resultString = `After moving last three characters to start, new string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayCreateStringUsingMiddleThreeCharactersOfOddString(status, string) {
+        const resultString = status ?
+            `New string is ${string}` :
+            `Given string is not odd`;
+        console.log(resultString);
+    }
+
+    static displayConcatenateTwoStringIfLengthDoesNotMatch(string) {
+        const resultString = `New string after concatenation is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayCheckStringEndsWtihScript(status) {
+        const resultString = status ?
+            `Your word ends with 'Script'` :
+            `Your word does not ends with 'Script'`;
+        console.log(resultString);
+    }
+
+    static displayCheckCityNameIfBeginsWithLosOrNew(status) {
+        const resultString = status ?
+            `Your city start with 'Los' or 'New'` :
+            ``;
+        console.log(resultString);
+    }
+
+    static displayCreateNewStringIfStringStartOrEndsWithP(string) {
+        console.log(string);
+    }
+
+    static displayCreateNewStringUsingFirstAndLastGivenNumberOfCharacters(string) {
+        const resultString = `New string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayComputeSumOfThreeElementsOfArrayOfLengthThree(number) {
+        const resultString = `Sum of three elements in user array is: ${number}`;
+        console.log(resultString)
+    }
+    
+    static displayRotateElementsLeftInGivenArrayOfLengthThree(array) {
+        const resultString = `Array after rotation to the left is: ${array}`;
+        console.log(resultString);
+    }
+}
