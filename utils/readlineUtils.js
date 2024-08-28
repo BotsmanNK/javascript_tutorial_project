@@ -178,7 +178,7 @@ export class ReadLineUtils {
     }
     
     static readThirdOfThreeNumberHaveSameRightmostDigit() {
-        return this.readNumber('Please enter your third number to check right digit: ')
+        return this.readNumber('Please enter your third number to check right digit: ');
     }
 
     static readFirstOfThreeNumberGreaterThan20() {
@@ -230,7 +230,7 @@ export class ReadLineUtils {
     }
 
     static readUserNumberCreateStringUsingFirstAndLastGivenNumberOfCharacters() {
-        return this.readNumber(`Enter a number to create a new string: `)
+        return this.readNumber(`Enter a number to create a new string: `);
     }
 
     static readString(question) {
@@ -341,27 +341,27 @@ export class ReadLineUtils {
     }
 
     static readSecondUserStringConcanateTwoStringsExceptFirstCharacter() {
-        return this.readString(`Enter second string here: `)
+        return this.readString(`Enter second string here: `);
     }
 
     static readUserStringToMoveLastThreeCharactersToStart() {
-        return this.readString(`Enter you text to add last three characters to start: `)
+        return this.readString(`Enter you text to add last three characters to start: `);
     }
 
     static readUserStringCreateStringUsingMiddleThreeCharactersOfOddString() {
-        return this.readString(`Enter your text to create a new string using middle three characters: `)
+        return this.readString(`Enter your text to create a new string using middle three characters: `);
     }
 
     static readFirstUserStringConcanateTwoStringsIfLengthDoesNotMatch() {
-        return this.readString(`Enter your first string here to concanate: `)
+        return this.readString(`Enter your first string here to concanate: `);
     }
 
     static readSecondUserStringConcanateTwoStringsIfLengthDoesNotMatch() {
-        return this.readString(`Enter your second string here to concanate: `)
+        return this.readString(`Enter your second string here to concanate: `);
     }
 
     static readUserStringCheckStringEndsWithScript() {
-        return this.readString(`Enter your string to check if it ends with 'Script': `)
+        return this.readString(`Enter your string to check if it ends with 'Script': `);
     }
 
     static readUserStringCheckCityNameIfBeginsWithLosOrNew() {
@@ -369,11 +369,11 @@ export class ReadLineUtils {
     }
 
     static readUserStringCreateNewStringIfStringStartOrEndsWithP() {
-        return this.readString(`Enter your string to check if it starts or ends with 'P': `)
+        return this.readString(`Enter your string to check if it starts or ends with 'P': `);
     }
 
     static readUserStringCreateStringUsingFirstAndLastGivenNumberOfCharacters() {
-        return this.readString(`Enter your string here to create a new: `)
+        return this.readString(`Enter your string here to create a new: `);
     }
 
     static readNumberArray(question) {
@@ -384,7 +384,15 @@ export class ReadLineUtils {
             });
 
             rl.question(question, (answer) => {
-                const numberArray = answer.split(',').map(Number);
+                let numberArray = [];
+
+                if (answer != null && typeof answer !== 'undefined') {
+                    answer = answer.trim();
+                }
+                
+                if (answer != '') {
+                    numberArray = answer.split(',').map(Number);
+                }
                 rl.close();
                 resolve(numberArray);
             });
@@ -392,10 +400,54 @@ export class ReadLineUtils {
     }
 
     static readArrayOfThreeNumbersToGetSum() {
-        return this.readNumberArray(`Enter array of three numbers to get sum: `)
+        return this.readNumberArray(`Enter array of three numbers to get sum: `);
     }
 
     static readArrayOfThreeNumbersToRotateLeft() {
-        return this.readNumberArray(`Enter array of three number to rotate left: `)
+        return this.readNumberArray(`Enter array of three number to rotate left: `);
+    }
+
+    static readArrayToCheckIfOneAppearsInFirstOrLastPosition() {
+        return this.readNumberArray(`Enter your array to check first and last position: `);
+    }
+
+    static readArrayToCheckFirstAndLastElementsAreSameInGivenArray() {
+        return this.readNumberArray(`Enter your array to check whether first and last elements are same: `);
+    }
+
+    static readArrayToReverseElementsOfGivenArray() {
+        return this.readNumberArray(`Enter your array to reverse it: `);
+    }
+
+    static readArrayToFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray() {
+        return this.readNumberArray(`Enter your array to find largest and set other elements to that value: `)
+    }
+
+    static readFirstArrayToCreateArrayTakingMiddleElementsOfTwoArrays() {
+        return this.readNumberArray(`Enter your first array: `);
+    }
+
+    static readSecondArrayToCreateArrayTakingMiddleElementsOfTwoArrays() {
+        return this.readNumberArray(`Enter your second array: `);
+    }
+
+    static readArrayToCreateArrayByTakingFirstAndLastElementsFromGivenArray() {
+        return this.readNumberArray(`Enter your array here to create a new one from first and last element: `)
+    }
+
+    static readArrayToCheckWhetherArrayContainsOneOrThree() {
+        return this.readNumberArray(`Enter your array here to check if it contains 1 or 3: `)
+    }
+
+    static readArrayToCheckWhetherArrayDoesNotContainsOneOrThree() {
+        return this.readNumberArray(`Enter your array here to check if it does not contains 1 or 3: `)
+    }
+
+    static readArrayToCheckWhetherGivenArrayContainsThirtyAndFourtyTwice() {
+        return this.readNumberArray(`Enter your array to check if contains 30 or 40 twice: `)
+    }
+
+    static readSwapFirstAndLastElementsOfGivenArray() {
+        return this.readNumberArray(`Enter your array to swap first and last elements: `);
     }
 }

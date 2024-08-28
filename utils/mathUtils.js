@@ -5,7 +5,7 @@ export class MathUtils {
     }
 
     static allWithinRange(numbers, startRange, endRange) {
-        return numbers.every((number) => this.withinRange(number, startRange, endRange))
+        return numbers.every((number) => this.withinRange(number, startRange, endRange));
     }
 
     static withinRange(number, startRange, endRange) {

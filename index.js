@@ -885,7 +885,7 @@ await moveLastThreeCharactersToStart()
 async function createStringUsingMiddleThreeCharactersOfOddString() {
     const userString = await ReadLineUtils.readUserStringCreateStringUsingMiddleThreeCharactersOfOddString();
 
-    if (userString.length <= 3) {
+    if (userString.length < 3) {
         DisplayUtils.displayErrorUserInputShouldBeMoreThanThreeCharacter();
         return;
     }
@@ -991,6 +991,11 @@ await createNewStringUsingFirstAndLastGivenNumberOfCharacters();
 async function computeSumOfThreeElementsOfArrayOfLengthThree() {
     const userArray = await ReadLineUtils.readArrayOfThreeNumbersToGetSum();
 
+    if (userArray.length != 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+        return
+    }
+
     const result = ArrayUtils.sumOfThreeElementsOfArrayOfLengthThree(userArray);
 
     DisplayUtils.displayComputeSumOfThreeElementsOfArrayOfLengthThree(result);
@@ -1004,9 +1009,177 @@ await computeSumOfThreeElementsOfArrayOfLengthThree();
 async function rotateElementsLeftInGivenArrayOfLengthThree() {
     const userArray = await ReadLineUtils.readArrayOfThreeNumbersToRotateLeft();
 
+    if (userArray.length != 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+        return
+    }
+
     const result = ArrayUtils.rotateElementsLeftOfLengthThree(userArray);
 
     DisplayUtils.displayRotateElementsLeftInGivenArrayOfLengthThree(result);
 }
 
 await rotateElementsLeftInGivenArrayOfLengthThree();
+
+    //Write a function to check whether 1 appears in the first or last position of a given array of integers. 
+    //The array length must be larger than or equal to 1.
+    
+async function checkWhetherOneAppearsInFirstOrLastPosititonOfGivenArray() {
+    const userArray = await ReadLineUtils.readArrayToCheckIfOneAppearsInFirstOrLastPosition();
+
+    const arrayCheck = userArray.at(0, 1) || userArray.at(userArray.length - 1, 1);
+
+    DisplayUtils.displayCheckWhetherOneAppearsInFirstOrLastPosititonOfGivenArray(arrayCheck);
+}
+
+await checkWhetherOneAppearsInFirstOrLastPosititonOfGivenArray();
+
+    //Write a function to check whether the first and last elements are the same in a given array of integers of length 3.  
+    
+async function checkWhetherFirstAndLastElementsAreSameInGivenArray() {
+    const userArray = await ReadLineUtils.readArrayToCheckFirstAndLastElementsAreSameInGivenArray();
+
+    if (userArray.length != 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+        return
+    }
+
+    const arrayCheck = userArray.at(0) == userArray.at(userArray.length - 1);
+
+    DisplayUtils.displayCheckWhetherFirstAndLastElementsAreSameInGivenArray(arrayCheck);
+
+}
+
+await checkWhetherFirstAndLastElementsAreSameInGivenArray();
+
+    //Write a function to reverse the elements of a given array of integers of length 3.  
+    
+async function reverseElementsOfGivenArray() {
+    const userArray = await ReadLineUtils.readArrayToReverseElementsOfGivenArray();
+
+    if (userArray.length != 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+        return
+    }
+
+    const result = userArray.reverse();
+
+    DisplayUtils.displayReverseElementsOfGivenArray(result);
+}
+
+await reverseElementsOfGivenArray();
+
+    //Write a function to find the largest value between the first and last elements and set all the other elements to that value. 
+    //Display the updated array.  
+    
+async function findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray() {
+    const userArray = await ReadLineUtils.readArrayToFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray();
+
+    const result = ArrayUtils.findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(userArray);
+
+    DisplayUtils.displayFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(result);
+}
+
+await findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray();
+
+    //Write a function to create an array taking the middle elements of the two arrays of integer and each length 3. 
+    
+async function createArrayTakingMiddleElementsOfTwoArrays() {
+    const userArrayOne = await ReadLineUtils.readFirstArrayToCreateArrayTakingMiddleElementsOfTwoArrays();
+    const userArrayTwo = await ReadLineUtils.readSecondArrayToCreateArrayTakingMiddleElementsOfTwoArrays();
+
+    if (userArrayOne.length != 3 && userArrayTwo.length != 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+        return
+    }
+    
+    const resultArray = [];
+    resultArray.push(userArrayOne[1], userArrayTwo[1]);
+
+    DisplayUtils.displayCreateNewArrayTakingMiddleElementsOfTwoArrays(resultArray);
+}
+
+await createArrayTakingMiddleElementsOfTwoArrays();
+
+    //Write a function to create an array by taking the first and last elements from a given array of integers. 
+    //The length must be larger than or equal to 1.
+
+async function createArrayByTakingFirstAndLastElementsFromGivenArray() {
+    const userArray = await ReadLineUtils.readArrayToCreateArrayByTakingFirstAndLastElementsFromGivenArray();
+    
+    const resultArray = [];
+
+    resultArray.push(userArray[0], userArray[userArray.length - 1]);
+
+    DisplayUtils.displayCreateArrayByTakingFirstAnLastElementsFromGivenArray(resultArray);
+}
+
+await createArrayByTakingFirstAndLastElementsFromGivenArray();
+
+    //Write a function to test whether an array of integers of length 2 contains 1 or 3.  
+
+async function checkWhetherArrayContainsOneOrThree() {
+    const userArray = await ReadLineUtils.readArrayToCheckWhetherArrayContainsOneOrThree();
+
+    if (userArray.length != 2) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(2);
+        return
+    }
+    
+    const check = userArray.includes(1) || userArray.includes(3);
+
+    DisplayUtils.displayCheckWhetherArrayContainsOneOrThree(check);
+}
+
+await checkWhetherArrayContainsOneOrThree();
+
+    //Write a function to test whether an array of integers of length 2 does not contain 1 or 3.  
+
+async function checkWhetherArrayDoesNotContainsOneOrThree() {
+    const userArray = await ReadLineUtils.readArrayToCheckWhetherArrayDoesNotContainsOneOrThree();
+
+    if (userArray.length != 2) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(2);
+        return
+    }
+    
+    const check = userArray.includes(1) || userArray.includes(3);
+
+    DisplayUtils.displayCheckWhetherArrayDoesNotContainsOneOrThree(check);
+}
+
+await checkWhetherArrayDoesNotContainsOneOrThree();
+
+    //Write a function to test whether a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.  
+    
+async function checkWhetherGivenArrayContainsThirtyAndFourtyTwice() {
+    const userArray = await ReadLineUtils.readArrayToCheckWhetherGivenArrayContainsThirtyAndFourtyTwice();
+
+    if (userArray.length < 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeLessThanGivenNumber(3);
+        return
+    }
+
+    const check = (userArray[0] == 30 && userArray[1] == 30) || (userArray[0] == 40 && userArray[1] == 40);
+
+    DisplayUtils.displayCheckWhetherGivenArrayContainsThirtyAndFourtyTwice(check);
+}
+
+await checkWhetherGivenArrayContainsThirtyAndFourtyTwice();
+
+    //Write a function to swap the first and last elements of a given array of integers. The array length should be at least 1.  
+    
+async function swapFirstAndLastElementsOfGivenArray() {
+    const userArray = await ReadLineUtils.readSwapFirstAndLastElementsOfGivenArray();
+
+    if (userArray.length < 1) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeMoreThanGivenNumber(1);
+        return;
+    }
+
+    const result = ArrayUtils.swapFirstAndLastElementsOfGivenArray(userArray);
+
+    DisplayUtils.displaySwapFirstAndLastElementsOfGivenArray(result);
+}
+
+await swapFirstAndLastElementsOfGivenArray();

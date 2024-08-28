@@ -374,13 +374,88 @@ export class DisplayUtils {
         console.log(resultString);
     }
 
+    static displayErrorUserArrayInputLengthShouldBeGivenNumber(number) {
+        const resultString = `Array length should be ${number}`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserArrayInputLengthShouldBeLessThanGivenNumber(number) {
+        const resultString = `Array length should be less than ${number}`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserArrayInputLengthShouldBeMoreThanGivenNumber(number) {
+        const resultString = `Array length should be more than ${number}`;
+        console.log(resultString);
+    }
+
     static displayComputeSumOfThreeElementsOfArrayOfLengthThree(number) {
         const resultString = `Sum of three elements in user array is: ${number}`;
-        console.log(resultString)
+        console.log(resultString);
     }
     
     static displayRotateElementsLeftInGivenArrayOfLengthThree(array) {
         const resultString = `Array after rotation to the left is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherOneAppearsInFirstOrLastPosititonOfGivenArray(status) {
+        const resultString = status ?
+            'Given array either starts with 1 or ends with 1' :
+            'Given array does not start or end with 1';
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherFirstAndLastElementsAreSameInGivenArray(status) {
+        const resultString = status ?
+            `Given array starts and ends with same element` :
+            `Given array does not start and end with same element`;
+        console.log(resultString);
+    }
+
+    static displayReverseElementsOfGivenArray(array) {
+        const resultString = `Your array after reversing is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(array) {
+        const resultString = `Your new array after setting maximum value of first or last elements to all of elements is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayCreateNewArrayTakingMiddleElementsOfTwoArrays(array) {
+        const resultString = `Your new array after taking middle elements of two arrays is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayCreateArrayByTakingFirstAnLastElementsFromGivenArray(array) {
+        const resultString = `Your new array after taking first and last elements is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherArrayContainsOneOrThree(status) {
+        const resultString = status ?
+            `Your array does contain 1 or 3` :
+            `Your array does not contain 1 or 3`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherArrayDoesNotContainsOneOrThree(status) {
+        const resultString = status ?
+            `Your array does contain 1 or 3` :
+            `Your array does not contain 1 or 3`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherGivenArrayContainsThirtyAndFourtyTwice(status) {
+        const resultString = status ?
+            `Your array does contain 30 and 40 twice` :
+            `Your array does not contain 30 and 40 twice`;
+        console.log(resultString);
+    }
+
+    static displaySwapFirstAndLastElementsOfGivenArray(array) {
+        const resultString = `After swapping first and last elements, new array is: ${array}`;
         console.log(resultString);
     }
 }

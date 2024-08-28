@@ -1,5 +1,5 @@
 export class DateTimeUtils {
-     static getDay(date) {
+    static getDay(date) {
         const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         return daysOfWeek[date.getDay()];
