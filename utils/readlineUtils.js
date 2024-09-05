@@ -233,6 +233,50 @@ export class ReadLineUtils {
         return this.readNumber(`Enter a number to create a new string: `);
     }
 
+    static readAddTwoDigitsToGivenPositiveInteger() {
+        return this.readNumber(`Enter your integer: `)
+    }
+
+    static readFirstUserNumberToAddTwoPositiveIntegersWithoutCarrying() {
+        return this.readNumber(`Enter your first number to add two integers without carrying: `)
+    }
+
+    static readSecondUserNumberToAddTwoPositiveIntegersWithoutCarrying() {
+        return this.readNumber(`Enter your second number to add two integers without carrying: `)
+    }
+
+    static readToFindTypeOfGivenAngle() {
+        return this.readNumber(`Enter your angle: `);
+    }
+
+    static firstUserNumberOfTwoIntegersAreSimiliar() {
+        return this.readNumber(`Enter your first number: `);
+    }
+
+    static secondUserNumberOfTwoIntegersAreSimiliar() {
+        return this.readNumber(`Enter your second number: `);
+    }
+
+    static userDivisorOfTwoIntegersAreSimiliar() {
+        return this.readNumber(`Enter you divisor: `);
+    }
+
+    static readXInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression() {
+        return this.readNumber(`Enter you x: `);
+    }
+
+    static readYInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression() {
+        return this.readNumber(`Enter you y: `);
+    }
+
+    static readZInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression() {
+        return this.readNumber(`Enter you z: `);
+    }
+
+    static readUserNumberToFindKthGreatestElementInGivenArrayOfIntegers() {
+        return this.readNumber(`Enter your kth element: `)
+    }
+
     static readString(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({
@@ -376,6 +420,10 @@ export class ReadLineUtils {
         return this.readString(`Enter your string here to create a new: `);
     }
 
+    static readUserStringToReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet() {
+        return this.readString(`Enter your string here to replace each character with next in alphabet: `)
+    }
+
     static readNumberArray(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({
@@ -450,4 +498,48 @@ export class ReadLineUtils {
     static readSwapFirstAndLastElementsOfGivenArray() {
         return this.readNumberArray(`Enter your array to swap first and last elements: `);
     }
+
+    static readArrayToDivieGivenArrayInTwoAndComputeSumOfTwoAPartsToStoreItInArray() {
+        return this.readNumberArray(`Enter your array here to divide it in two and compute sum: `)
+    }
+
+    static readFirstArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar() {
+        return this.readNumberArray(`Enter your first array to check if it is similiar: `)
+    }
+
+    static readSecondArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar() {
+        return this.readNumberArray(`Enter your second array to check if it is similiar: `)
+    }
+
+    static readUserArrayToFindKthGreatestElementInGivenArrayOfIntegers() {
+        return this.readNumberArray(`Enter your array: `)
+    }
+
+    static readStringArray(question) {
+        return new Promise((resolve) => {
+            const rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
+
+            rl.question(question, (answer) => {
+                let stringArray = [];
+
+                if (answer != null && typeof answer !== 'undefined') {
+                    answer = answer.trim();
+                }
+                        
+                if (answer != '') {
+                    stringArray = answer.split(',').map(str => str.trim());
+                }
+                rl.close();
+                resolve(stringArray);
+            });
+        });
+    }
+
+    static readUserArrayToFindLongestStringFromGivenArray() {
+        return this.readStringArray(`Enter your string array here: `);
+    }
+
 }

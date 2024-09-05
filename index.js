@@ -12,7 +12,7 @@ import { ArrayUtils } from './utils/arrayUtils.js';
    // Write a function to display the current day and time in the following format.  
    // Sample Output : Today is : Tuesday.
    // Current time is : 10 PM : 30 : 38
-
+/*
 function displayCurrentDayAndTime() {
     const now = new Date();
     const currentDay = DateTimeUtils.getDay(now);
@@ -1019,7 +1019,7 @@ async function rotateElementsLeftInGivenArrayOfLengthThree() {
     DisplayUtils.displayRotateElementsLeftInGivenArrayOfLengthThree(result);
 }
 
-await rotateElementsLeftInGivenArrayOfLengthThree();
+await rotateElementsLeftInGivenArrayOfLengthThree(); */
 
     //Write a function to check whether 1 appears in the first or last position of a given array of integers. 
     //The array length must be larger than or equal to 1.
@@ -1183,3 +1183,157 @@ async function swapFirstAndLastElementsOfGivenArray() {
 }
 
 await swapFirstAndLastElementsOfGivenArray();
+
+    //Write a function to add two digits to a given positive integer of length two.  
+
+async function addTwoDigitsToGivenPositiveInteger() {
+    const userNumber = await ReadLineUtils.readAddTwoDigitsToGivenPositiveInteger();
+
+    if (userNumber < 1) {
+        DisplayUtils.displayErrorUserNumberShouldBePositive();
+        return;
+    }
+    const resultNumber = userNumber % 10 + Math.floor(userNumber / 10);
+
+    DisplayUtils.displayAddTwoDigitsToGivenPositiveInteger(resultNumber);
+}
+
+await addTwoDigitsToGivenPositiveInteger();
+
+    //Write a function to add two positive integers without carrying.
+
+async function addTwoPositiveIntegersWithoutCarrying() {
+    const firstUserNumber = await ReadLineUtils.readFirstUserNumberToAddTwoPositiveIntegersWithoutCarrying()
+    const secondUserNumber = await ReadLineUtils.readSecondUserNumberToAddTwoPositiveIntegersWithoutCarrying();
+
+    const resultNumber = MathUtils.addTwoPositiveIntegersWithoutCarrying(firstUserNumber, secondUserNumber);
+
+    DisplayUtils.displayAddTwoPositiveIntegersWithoutCarrying(resultNumber);
+}
+
+await addTwoPositiveIntegersWithoutCarrying();
+
+    //Write a function to find the longest string from a given array of strings.  
+
+async function findLongestStringFromGivenArray() {
+    const userArray = await ReadLineUtils.readUserArrayToFindLongestStringFromGivenArray();
+
+    const result = ArrayUtils.findLongestStringFromGivenArray(userArray);
+
+    DisplayUtils.displayFindLongestStringFromGivenArray(result);
+}
+
+await findLongestStringFromGivenArray();
+
+    //Write a function to replace each character in a given string with the next in the English alphabet.  
+    //Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+
+async function replaceEachCharacterInGivenStringWithNextInEnglsihAlphabet() {
+    const userString = await ReadLineUtils.readUserStringToReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet();
+
+    const resultString = StringUtils.changingEachCharacter(userString);
+
+    DisplayUtils.displayReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet(resultString);
+}
+
+await replaceEachCharacterInGivenStringWithNextInEnglsihAlphabet();
+
+
+
+//Write a function to divide a given array of positive integers into two parts.
+//First element belongs to the first part, second element belongs to the second part, 
+//and third element belongs to the first part and so on. 
+//Now compute the sum of two parts and store it in an array of size two.  
+
+async function divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray() {
+    const userArray = await ReadLineUtils.readArrayToDivieGivenArrayInTwoAndComputeSumOfTwoAPartsToStoreItInArray();
+
+    const result = ArrayUtils.divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray(userArray);
+
+    DisplayUtils.displayDivideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreInInArray(result);
+}
+
+await divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray();   
+
+    //Write a function to find the types of a given angle.  
+    //Types of angles:
+    //Acute angle: An angle between 0 and 90 degrees.
+    //Right angle: An 90 degree angle.
+    //Obtuse angle: An angle between 90 and 180 degrees.
+    //Straight angle: A 180 degree angle.
+
+async function findTypeOfGivenAngle() {
+    const userNumber = await ReadLineUtils.readToFindTypeOfGivenAngle();
+
+    if (userNumber > 180) {
+        DisplayUtils.displayErrorUserNumberShouldBeLessThanOneHundredEighty();
+        return;
+    }
+
+    const result = GeometryUtils.findTypeOfGivenAngle(userNumber);
+
+    DisplayUtils.displayFindTypeOfGivenAngle(result);
+}
+
+await findTypeOfGivenAngle();
+
+    //WWrite a function to determine if two arrays of integers of the same length are similar. 
+    //The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.  
+
+async function determineIfTwoArraysAreSameLengthAreSimiliar() {
+    const firstUserArray = await ReadLineUtils.readFirstArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar();
+    const secondUserArray = await ReadLineUtils.readSecondArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar();
+
+    const result = ArrayUtils.determineIfTwoArraysAreSameLengthAreSimiliar(firstUserArray, secondUserArray);
+
+    DisplayUtils.displayDetermineIfTwoArraysAreSameLengthAreSimiliar(result);
+}
+
+await determineIfTwoArraysAreSameLengthAreSimiliar();
+
+    //Write a function that takes two integers and a divisor.
+    //If the given divisor divides both integers and does not divide either, two specified integers are similar.
+    //Check whether two integers are similar or not.
+    
+async function checkWhetherTwoIntegersAreSimiliar() {
+    const firstUserNumber = await ReadLineUtils.firstUserNumberOfTwoIntegersAreSimiliar();
+    const secondUserNumber = await ReadLineUtils.secondUserNumberOfTwoIntegersAreSimiliar();
+    const userDivisor = await ReadLineUtils.userDivisorOfTwoIntegersAreSimiliar();
+
+    const result = MathUtils.checkWhetherTwoIntegersAreSimiliar(firstUserNumber, secondUserNumber, userDivisor);
+
+    DisplayUtils.displayCheckWhetherTwoIntegersAreSimiliar(result);
+}
+
+await checkWhetherTwoIntegersAreSimiliar();
+
+    //Write a function to check whether it is possible to replace $ in a given expression x $ y = z with one
+    // of the four signs +, -, * or / to obtain a correct expression.  
+    //For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
+
+async function checkWhetherItIsPossibleToReplaceDollarSignInGivenExpression() {
+    DisplayUtils.displayArithmeticExperssion();
+
+    const x = await ReadLineUtils.readXInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
+    const y = await ReadLineUtils.readYInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
+    const z = await ReadLineUtils.readZInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
+
+    const result = MathUtils.checkArithmeticsExpression(x, y, z);
+
+    DisplayUtils.displayCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression(result);
+}
+
+await checkWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
+
+    //Write a function to find the kth greatest element in a given array of integers.
+
+async function findKthGreatestElementInGivenArrayOfIntegers() {
+    const userArray = await ReadLineUtils.readUserArrayToFindKthGreatestElementInGivenArrayOfIntegers();
+    const userNumber = await ReadLineUtils.readUserNumberToFindKthGreatestElementInGivenArrayOfIntegers();
+
+    const result = ArrayUtils.findKthGreatestElementInGivenArrayOfIntegers(userArray, userNumber);
+
+    DisplayUtils.displayFindKthGreatestElementInGivenArrayOfIntgegers(result);   
+}
+
+await findKthGreatestElementInGivenArrayOfIntegers();

@@ -389,6 +389,16 @@ export class DisplayUtils {
         console.log(resultString);
     }
 
+    static displayErrorUserNumberShouldBePositive() {
+        const resultString = `Number should be positive`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserNumberShouldBeLessThanOneHundredEighty() {
+        const resultString = `Number should between 1 and 180`;
+        console.log(resultString);
+    }
+
     static displayComputeSumOfThreeElementsOfArrayOfLengthThree(number) {
         const resultString = `Sum of three elements in user array is: ${number}`;
         console.log(resultString);
@@ -456,6 +466,67 @@ export class DisplayUtils {
 
     static displaySwapFirstAndLastElementsOfGivenArray(array) {
         const resultString = `After swapping first and last elements, new array is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayAddTwoDigitsToGivenPositiveInteger(number) {
+        const resultString = `After adding two digits to positive integer, new number is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayAddTwoPositiveIntegersWithoutCarrying(number) {
+        const resultString = `After adding two positive integers without carrying, new number is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindLongestStringFromGivenArray(string) {
+        const resultString = `The longest string from given array is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet(string) {
+        const resultString = `New string after changing each character with next in english alphabet is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayDivideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreInInArray(array) {
+        const resultString = `Array with sum of two divided arrays is: ${array}`;
+        console.log(resultString);
+    }
+
+    static displayFindTypeOfGivenAngle(string) {
+        const resultString = `Given angle is ${string}`;
+        console.log(resultString);
+    }
+
+    static displayDetermineIfTwoArraysAreSameLengthAreSimiliar(status) {
+        const resultString = status ?
+            `Two arrays of same length are similiar` :
+            `Two arrays of same length are not similiar`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherTwoIntegersAreSimiliar(status) {
+        const resultString = status ?
+            `Two integers are similiar` :
+            `Two integers are not similiar`;
+        console.log(resultString);
+    }
+
+    static displayArithmeticExperssion() {
+        const resultString = `You arithmetic expression is: x $ y = z`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression(status) {
+        const resultString = status ?
+            `You can replace $ with one of following +, -, / or * operators` :
+            `You can not replace $ with one of following +, -, / or * operators`;
+        console.log(resultString);
+    }
+
+    static displayFindKthGreatestElementInGivenArrayOfIntgegers(number) {
+        const resultString = `Your kth element in given array is: ${number}`;
         console.log(resultString);
     }
 }

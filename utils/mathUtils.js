@@ -48,8 +48,34 @@ export class MathUtils {
 
     static checkIfThreeNumbersLessThanGivenNumber(firstNumber, secondNumber, thirdNumber, numberGreaterThan) {
         return (
-        (firstNumber >= numberGreaterThan && (firstNumber < secondNumber || firstNumber < thirdNumber)) ||
-        (secondNumber >= numberGreaterThan && (secondNumber < firstNumber || secondNumber < thirdNumber)) ||
-        (thirdNumber >= numberGreaterThan && (thirdNumber < secondNumber || thirdNumber < firstNumber)));
+            (firstNumber >= numberGreaterThan && (firstNumber < secondNumber || firstNumber < thirdNumber)) ||
+            (secondNumber >= numberGreaterThan && (secondNumber < firstNumber || secondNumber < thirdNumber)) ||
+            (thirdNumber >= numberGreaterThan && (thirdNumber < secondNumber || thirdNumber < firstNumber)));
+    }
+
+    static addTwoPositiveIntegersWithoutCarrying(firstNumber, secondNumber) {
+        let result = 0;
+        let multiplier = 1;
+
+        while (firstNumber > 0 && secondNumber > 0) {
+            result += multiplier * ((firstNumber + secondNumber) % 10); 
+            firstNumber = Math.floor(firstNumber / 10); 
+            secondNumber = Math.floor(secondNumber / 10); 
+            multiplier *= 10; 
+        }
+        return result;
+    }
+
+    static checkWhetherTwoIntegersAreSimiliar(firstNumber, secondNumber, divisor) {
+        if ((firstNumber % divisor === 0 && secondNumber % divisor === 0) ||
+            (firstNumber % divisor !== 0 && secondNumber % divisor !== 0)) {
+            return true; 
+        }
+        return false; 
+    }
+
+    static checkArithmeticsExpression(firstNumber, secondNumber, totalNumber) { 
+        return firstNumber + secondNumber == totalNumber || firstNumber * secondNumber == totalNumber ||
+               firstNumber / secondNumber == totalNumber || firstNumber - secondNumber == totalNumber;
     }
 }
