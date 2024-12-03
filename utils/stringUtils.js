@@ -91,4 +91,69 @@ export class StringUtils {
 
         return firstString.substring(0, m) + secondString.substring(0, m);
     }
+
+    static changeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase(string) {
+        let upperCount = 0; 
+        let lowerCount = 0; 
+    
+        for (let char of string) {
+            if (char >= 'A' && char <= 'Z') {
+                upperCount++;
+            } else if (char >= 'a' && char <= 'z') {
+                lowerCount++;
+            }
+        }
+    
+        if (upperCount > lowerCount) {
+            return string.toUpperCase();
+        } else {
+            return string.toLowerCase();
+        }
+    }
+
+    static checkWhetherItIsPossibleToRearrangeCharacters(firstString, secondString) {
+        if (firstString.length === 0 || secondString.length === 0) {
+            return false;
+        }
+
+        if (firstString.length != secondString.length) {
+            return false;
+        }
+
+        const charCount1 = {};
+        const charCount2 = {};
+
+        for (let char of firstString) {
+            charCount1[char] = (charCount1[char] || 0) + 1;
+        }
+
+        for (let char of secondString) {
+            charCount2[char] = (charCount2[char] || 0) + 1;
+        }
+
+        for (let char in charCount1) {
+            if (charCount1[char] !== charCount2[char]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    static checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases(string) {
+        const latinRegEx = /^[a-zA-Z]+$/;
+        if (!latinRegEx.test(string)) {
+            return false; 
+        }
+        for (let i = 1; i < string.length; i++) {
+            const currentIsUpper = string[i] === string[i].toUpperCase();
+            const previousIsUpper = string[i - 1] === string[i - 1].toUpperCase();
+
+            
+            if (currentIsUpper === previousIsUpper) {
+                return false;
+            }
+        }
+        return true; 
+    }
 }

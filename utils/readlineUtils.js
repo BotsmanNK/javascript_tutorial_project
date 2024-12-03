@@ -226,7 +226,7 @@ export class ReadLineUtils {
     }
 
     static readUserNumberAmountOfCopies() {
-        return this.readNumber(`Enter a number of times you want to multiple string: `)
+        return this.readNumber(`Enter a number of times you want to multiple string: `);
     }
 
     static readUserNumberCreateStringUsingFirstAndLastGivenNumberOfCharacters() {
@@ -238,11 +238,11 @@ export class ReadLineUtils {
     }
 
     static readFirstUserNumberToAddTwoPositiveIntegersWithoutCarrying() {
-        return this.readNumber(`Enter your first number to add two integers without carrying: `)
+        return this.readNumber(`Enter your first number to add two integers without carrying: `);
     }
 
     static readSecondUserNumberToAddTwoPositiveIntegersWithoutCarrying() {
-        return this.readNumber(`Enter your second number to add two integers without carrying: `)
+        return this.readNumber(`Enter your second number to add two integers without carrying: `);
     }
 
     static readToFindTypeOfGivenAngle() {
@@ -274,7 +274,19 @@ export class ReadLineUtils {
     }
 
     static readUserNumberToFindKthGreatestElementInGivenArrayOfIntegers() {
-        return this.readNumber(`Enter your kth element: `)
+        return this.readNumber(`Enter your kth element: `);
+    }
+
+    static readUserNumberToFindMaximumPossibleSumOfKConsecutiveNumbers() {
+        return this.readNumber(`Enter your number of kth consecutive numbers: `);
+    }
+
+    static readUserReplacementNumberToReplaceAllNumberWithSpecifiedNumberInArray() {
+        return this.readNumber(`Enter your replacement number to replace all numbers in array: `)
+    }
+
+    static readUserReplacerNumberToReplaceAllNumberWithSpecifiedNumberInArray() {
+        return this.readNumber(`Enter your replacer number to replace all numbers in array: `)
     }
 
     static readString(question) {
@@ -361,7 +373,7 @@ export class ReadLineUtils {
     }
 
     static readUserStringCheckStringContainsEqualNumberOfPAndT() {
-        return this.readString(`Enter your text to check if it contains equal number of P and T: `)
+        return this.readString(`Enter your text to check if it contains equal number of P and T: `);
     }
 
     static readUserStringOfCopiesOfGivenString() {
@@ -369,15 +381,15 @@ export class ReadLineUtils {
     }
 
     static readUserStringToCreateFourCopiesOfLastThreeCharacters() {
-        return this.readString(`Enter your string to create four copies of last characters: `)
+        return this.readString(`Enter your string to create four copies of last characters: `);
     }
 
     static readUserStringExtractFirstHalfOfEvenString() {
-        return this.readString(`Enter your even string to extract first half of it: `)
+        return this.readString(`Enter your even string to extract first half of it: `);
     }
 
     static readUserStringCreateNewStringWithoutFirstAndLastCharacters() {
-        return this.readString(`Enter your word to delete first and last character: `)
+        return this.readString(`Enter your word to delete first and last character: `);
     }
 
     static readFirstUserStringConcanateTwoStringsExceptFirstCharacter() {
@@ -421,7 +433,23 @@ export class ReadLineUtils {
     }
 
     static readUserStringToReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet() {
-        return this.readString(`Enter your string here to replace each character with next in alphabet: `)
+        return this.readString(`Enter your string here to replace each character with next in alphabet: `);
+    }
+
+    static readUserStringToChangeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase() {
+        return this.readString(`Enter your string to change case of minimum number of letters: `);
+    }
+
+    static readFirstUserStringToCheckWhetherItIsPossibleToRearrangeCharacters() {
+        return this.readString(`Enter your first string for rearrangement: `);
+    }
+
+    static readSecondUserStringToCheckWhetherItIsPossibleToRearrangeCharacters() {
+        return this.readString(`Enter your second string for rearrangement: `);
+    }
+
+    static readUserStringCheckWhetherGivenStringConatinsOnlyLatinAndAlternatingCases() {
+        return this.readString(`Enter your string here: `)
     }
 
     static readNumberArray(question) {
@@ -468,7 +496,7 @@ export class ReadLineUtils {
     }
 
     static readArrayToFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray() {
-        return this.readNumberArray(`Enter your array to find largest and set other elements to that value: `)
+        return this.readNumberArray(`Enter your array to find largest and set other elements to that value: `);
     }
 
     static readFirstArrayToCreateArrayTakingMiddleElementsOfTwoArrays() {
@@ -480,19 +508,19 @@ export class ReadLineUtils {
     }
 
     static readArrayToCreateArrayByTakingFirstAndLastElementsFromGivenArray() {
-        return this.readNumberArray(`Enter your array here to create a new one from first and last element: `)
+        return this.readNumberArray(`Enter your array here to create a new one from first and last element: `);
     }
 
     static readArrayToCheckWhetherArrayContainsOneOrThree() {
-        return this.readNumberArray(`Enter your array here to check if it contains 1 or 3: `)
+        return this.readNumberArray(`Enter your array here to check if it contains 1 or 3: `);
     }
 
     static readArrayToCheckWhetherArrayDoesNotContainsOneOrThree() {
-        return this.readNumberArray(`Enter your array here to check if it does not contains 1 or 3: `)
+        return this.readNumberArray(`Enter your array here to check if it does not contains 1 or 3: `);
     }
 
     static readArrayToCheckWhetherGivenArrayContainsThirtyAndFourtyTwice() {
-        return this.readNumberArray(`Enter your array to check if contains 30 or 40 twice: `)
+        return this.readNumberArray(`Enter your array to check if contains 30 or 40 twice: `);
     }
 
     static readSwapFirstAndLastElementsOfGivenArray() {
@@ -500,19 +528,55 @@ export class ReadLineUtils {
     }
 
     static readArrayToDivieGivenArrayInTwoAndComputeSumOfTwoAPartsToStoreItInArray() {
-        return this.readNumberArray(`Enter your array here to divide it in two and compute sum: `)
+        return this.readNumberArray(`Enter your array here to divide it in two and compute sum: `);
     }
 
     static readFirstArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar() {
-        return this.readNumberArray(`Enter your first array to check if it is similiar: `)
+        return this.readNumberArray(`Enter your first array to check if it is similiar: `);
     }
 
     static readSecondArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar() {
-        return this.readNumberArray(`Enter your second array to check if it is similiar: `)
+        return this.readNumberArray(`Enter your second array to check if it is similiar: `);
     }
 
     static readUserArrayToFindKthGreatestElementInGivenArrayOfIntegers() {
-        return this.readNumberArray(`Enter your array: `)
+        return this.readNumberArray(`Enter your array: `);
+    }
+
+    static readUserArrayToFindMaximumPossibleSumOfKConsecutiveNumbers() {
+        return this.readNumberArray(`Enter your array to find maximum possible sum: `);
+    }
+
+    static readUserArrayToFindMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray() {
+        return this.readNumberArray(`Enter your array to find maximum difference: `);
+    }
+
+    static readUserArrayToFindMaximumDifferenceAmongAllPossiblePairsOfGivenArray() {
+        return this.readNumberArray(`Enter your array to find maximum difference among all pairs: `);
+    }
+
+    static readUserArrayToFindNumberAppearingMostFrequentlyInGivenArray() {
+        return this.readNumberArray(`Enter your array to find number appearing most frequently: `);
+    }
+
+    static readUserArrayToReplaceAllNumbersWithSpecifiedNumberInArray() {
+        return this.readNumberArray(`Enter your array to replace all numbers with specified number in array: `);
+    }
+
+    static readUserArrayToComputeSumOfAbsoluteDifferenceOfConsecutiveNumbersInGivenArray() {
+        return this.readNumberArray(`Enter your array to compute sum of abosulute difference numbers in given array: `);
+    }
+
+    static readUserArrayToComputeSumOfAbsoluteDifferenceOfConsecutiveNumbersInGivenArray() {
+        return this.readNumberArray(`Enter your array to compute sum of absolute difference of consecutive numbers: `);
+    }
+
+    static readFirstUserArrayToCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays() {
+        return this.readNumberArray(`Enter your first array: `);
+    }
+
+    static readSecondUserArrayToCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays() {
+        return this.readNumberArray(`Enter your second array: `);
     }
 
     static readStringArray(question) {
@@ -542,4 +606,7 @@ export class ReadLineUtils {
         return this.readStringArray(`Enter your string array here: `);
     }
 
+    static readUserArrayFindShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome() {
+        return this.readStringArray(`Enter your string array here to find shortest string and converst into palindrome: `)
+    }
 }

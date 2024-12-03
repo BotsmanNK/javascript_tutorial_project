@@ -1021,319 +1021,470 @@ async function rotateElementsLeftInGivenArrayOfLengthThree() {
 
 await rotateElementsLeftInGivenArrayOfLengthThree(); */
 
+
+    //---------------------------------------------------------------------------------------------------------
+
+
     //Write a function to check whether 1 appears in the first or last position of a given array of integers. 
     //The array length must be larger than or equal to 1.
+
+// async function checkWhetherOneAppearsInFirstOrLastPosititonOfGivenArray() {
+//     const userArray = await ReadLineUtils.readArrayToCheckIfOneAppearsInFirstOrLastPosition();
+
+//     const arrayCheck = userArray.at(0, 1) || userArray.at(userArray.length - 1, 1);
+
+//     DisplayUtils.displayCheckWhetherOneAppearsInFirstOrLastPosititonOfGivenArray(arrayCheck);
+// }
+
+// await checkWhetherOneAppearsInFirstOrLastPosititonOfGivenArray();
+
+//     //Write a function to check whether the first and last elements are the same in a given array of integers of length 3.  
     
-async function checkWhetherOneAppearsInFirstOrLastPosititonOfGivenArray() {
-    const userArray = await ReadLineUtils.readArrayToCheckIfOneAppearsInFirstOrLastPosition();
+// async function checkWhetherFirstAndLastElementsAreSameInGivenArray() {
+//     const userArray = await ReadLineUtils.readArrayToCheckFirstAndLastElementsAreSameInGivenArray();
 
-    const arrayCheck = userArray.at(0, 1) || userArray.at(userArray.length - 1, 1);
+//     if (userArray.length != 3) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+//         return
+//     }
 
-    DisplayUtils.displayCheckWhetherOneAppearsInFirstOrLastPosititonOfGivenArray(arrayCheck);
-}
+//     const arrayCheck = userArray.at(0) == userArray.at(userArray.length - 1);
 
-await checkWhetherOneAppearsInFirstOrLastPosititonOfGivenArray();
+//     DisplayUtils.displayCheckWhetherFirstAndLastElementsAreSameInGivenArray(arrayCheck);
 
-    //Write a function to check whether the first and last elements are the same in a given array of integers of length 3.  
+// }
+
+// await checkWhetherFirstAndLastElementsAreSameInGivenArray();
+
+//     //Write a function to reverse the elements of a given array of integers of length 3.  
     
-async function checkWhetherFirstAndLastElementsAreSameInGivenArray() {
-    const userArray = await ReadLineUtils.readArrayToCheckFirstAndLastElementsAreSameInGivenArray();
+// async function reverseElementsOfGivenArray() {
+//     const userArray = await ReadLineUtils.readArrayToReverseElementsOfGivenArray();
 
-    if (userArray.length != 3) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
-        return
-    }
+//     if (userArray.length != 3) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+//         return
+//     }
 
-    const arrayCheck = userArray.at(0) == userArray.at(userArray.length - 1);
+//     const result = userArray.reverse();
 
-    DisplayUtils.displayCheckWhetherFirstAndLastElementsAreSameInGivenArray(arrayCheck);
+//     DisplayUtils.displayReverseElementsOfGivenArray(result);
+// }
 
-}
+// await reverseElementsOfGivenArray();
 
-await checkWhetherFirstAndLastElementsAreSameInGivenArray();
-
-    //Write a function to reverse the elements of a given array of integers of length 3.  
+//     //Write a function to find the largest value between the first and last elements and set all the other elements to that value. 
+//     //Display the updated array.  
     
-async function reverseElementsOfGivenArray() {
-    const userArray = await ReadLineUtils.readArrayToReverseElementsOfGivenArray();
+// async function findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray() {
+//     const userArray = await ReadLineUtils.readArrayToFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray();
 
-    if (userArray.length != 3) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
-        return
-    }
+//     const result = ArrayUtils.findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(userArray);
 
-    const result = userArray.reverse();
+//     DisplayUtils.displayFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(result);
+// }
 
-    DisplayUtils.displayReverseElementsOfGivenArray(result);
-}
+// await findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray();
 
-await reverseElementsOfGivenArray();
-
-    //Write a function to find the largest value between the first and last elements and set all the other elements to that value. 
-    //Display the updated array.  
+//     //Write a function to create an array taking the middle elements of the two arrays of integer and each length 3. 
     
-async function findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray() {
-    const userArray = await ReadLineUtils.readArrayToFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray();
+// async function createArrayTakingMiddleElementsOfTwoArrays() {
+//     const userArrayOne = await ReadLineUtils.readFirstArrayToCreateArrayTakingMiddleElementsOfTwoArrays();
+//     const userArrayTwo = await ReadLineUtils.readSecondArrayToCreateArrayTakingMiddleElementsOfTwoArrays();
 
-    const result = ArrayUtils.findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(userArray);
-
-    DisplayUtils.displayFindLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray(result);
-}
-
-await findLargestValueBetweenFirstAndLastElementsAndSetOtherElementsToThatValueOfGivenArray();
-
-    //Write a function to create an array taking the middle elements of the two arrays of integer and each length 3. 
+//     if (userArrayOne.length != 3 && userArrayTwo.length != 3) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
+//         return
+//     }
     
-async function createArrayTakingMiddleElementsOfTwoArrays() {
-    const userArrayOne = await ReadLineUtils.readFirstArrayToCreateArrayTakingMiddleElementsOfTwoArrays();
-    const userArrayTwo = await ReadLineUtils.readSecondArrayToCreateArrayTakingMiddleElementsOfTwoArrays();
+//     const resultArray = [];
+//     resultArray.push(userArrayOne[1], userArrayTwo[1]);
 
-    if (userArrayOne.length != 3 && userArrayTwo.length != 3) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(3);
-        return
-    }
+//     DisplayUtils.displayCreateNewArrayTakingMiddleElementsOfTwoArrays(resultArray);
+// }
+
+// await createArrayTakingMiddleElementsOfTwoArrays();
+
+//     //Write a function to create an array by taking the first and last elements from a given array of integers. 
+//     //The length must be larger than or equal to 1.
+
+// async function createArrayByTakingFirstAndLastElementsFromGivenArray() {
+//     const userArray = await ReadLineUtils.readArrayToCreateArrayByTakingFirstAndLastElementsFromGivenArray();
     
-    const resultArray = [];
-    resultArray.push(userArrayOne[1], userArrayTwo[1]);
+//     const resultArray = [];
 
-    DisplayUtils.displayCreateNewArrayTakingMiddleElementsOfTwoArrays(resultArray);
-}
+//     resultArray.push(userArray[0], userArray[userArray.length - 1]);
 
-await createArrayTakingMiddleElementsOfTwoArrays();
+//     DisplayUtils.displayCreateArrayByTakingFirstAnLastElementsFromGivenArray(resultArray);
+// }
 
-    //Write a function to create an array by taking the first and last elements from a given array of integers. 
-    //The length must be larger than or equal to 1.
+// await createArrayByTakingFirstAndLastElementsFromGivenArray();
 
-async function createArrayByTakingFirstAndLastElementsFromGivenArray() {
-    const userArray = await ReadLineUtils.readArrayToCreateArrayByTakingFirstAndLastElementsFromGivenArray();
+//     //Write a function to test whether an array of integers of length 2 contains 1 or 3.  
+
+// async function checkWhetherArrayContainsOneOrThree() {
+//     const userArray = await ReadLineUtils.readArrayToCheckWhetherArrayContainsOneOrThree();
+
+//     if (userArray.length != 2) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(2);
+//         return
+//     }
     
-    const resultArray = [];
+//     const check = userArray.includes(1) || userArray.includes(3);
 
-    resultArray.push(userArray[0], userArray[userArray.length - 1]);
+//     DisplayUtils.displayCheckWhetherArrayContainsOneOrThree(check);
+// }
 
-    DisplayUtils.displayCreateArrayByTakingFirstAnLastElementsFromGivenArray(resultArray);
-}
+// await checkWhetherArrayContainsOneOrThree();
 
-await createArrayByTakingFirstAndLastElementsFromGivenArray();
+//     //Write a function to test whether an array of integers of length 2 does not contain 1 or 3.  
 
-    //Write a function to test whether an array of integers of length 2 contains 1 or 3.  
+// async function checkWhetherArrayDoesNotContainsOneOrThree() {
+//     const userArray = await ReadLineUtils.readArrayToCheckWhetherArrayDoesNotContainsOneOrThree();
 
-async function checkWhetherArrayContainsOneOrThree() {
-    const userArray = await ReadLineUtils.readArrayToCheckWhetherArrayContainsOneOrThree();
-
-    if (userArray.length != 2) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(2);
-        return
-    }
+//     if (userArray.length != 2) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(2);
+//         return
+//     }
     
-    const check = userArray.includes(1) || userArray.includes(3);
+//     const check = userArray.includes(1) || userArray.includes(3);
 
-    DisplayUtils.displayCheckWhetherArrayContainsOneOrThree(check);
-}
+//     DisplayUtils.displayCheckWhetherArrayDoesNotContainsOneOrThree(check);
+// }
 
-await checkWhetherArrayContainsOneOrThree();
+// await checkWhetherArrayDoesNotContainsOneOrThree();
 
-    //Write a function to test whether an array of integers of length 2 does not contain 1 or 3.  
-
-async function checkWhetherArrayDoesNotContainsOneOrThree() {
-    const userArray = await ReadLineUtils.readArrayToCheckWhetherArrayDoesNotContainsOneOrThree();
-
-    if (userArray.length != 2) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber(2);
-        return
-    }
+//     //Write a function to test whether a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.  
     
-    const check = userArray.includes(1) || userArray.includes(3);
+// async function checkWhetherGivenArrayContainsThirtyAndFourtyTwice() {
+//     const userArray = await ReadLineUtils.readArrayToCheckWhetherGivenArrayContainsThirtyAndFourtyTwice();
 
-    DisplayUtils.displayCheckWhetherArrayDoesNotContainsOneOrThree(check);
-}
+//     if (userArray.length < 3) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeLessThanGivenNumber(3);
+//         return
+//     }
 
-await checkWhetherArrayDoesNotContainsOneOrThree();
+//     const check = (userArray[0] == 30 && userArray[1] == 30) || (userArray[0] == 40 && userArray[1] == 40);
 
-    //Write a function to test whether a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.  
+//     DisplayUtils.displayCheckWhetherGivenArrayContainsThirtyAndFourtyTwice(check);
+// }
+
+// await checkWhetherGivenArrayContainsThirtyAndFourtyTwice();
+
+//     //Write a function to swap the first and last elements of a given array of integers. The array length should be at least 1.  
     
-async function checkWhetherGivenArrayContainsThirtyAndFourtyTwice() {
-    const userArray = await ReadLineUtils.readArrayToCheckWhetherGivenArrayContainsThirtyAndFourtyTwice();
+// async function swapFirstAndLastElementsOfGivenArray() {
+//     const userArray = await ReadLineUtils.readSwapFirstAndLastElementsOfGivenArray();
 
-    if (userArray.length < 3) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeLessThanGivenNumber(3);
-        return
-    }
+//     if (userArray.length < 1) {
+//         DisplayUtils.displayErrorUserArrayInputLengthShouldBeMoreThanGivenNumber(1);
+//         return;
+//     }
 
-    const check = (userArray[0] == 30 && userArray[1] == 30) || (userArray[0] == 40 && userArray[1] == 40);
+//     const result = ArrayUtils.swapFirstAndLastElementsOfGivenArray(userArray);
 
-    DisplayUtils.displayCheckWhetherGivenArrayContainsThirtyAndFourtyTwice(check);
-}
+//     DisplayUtils.displaySwapFirstAndLastElementsOfGivenArray(result);
+// }
 
-await checkWhetherGivenArrayContainsThirtyAndFourtyTwice();
+// await swapFirstAndLastElementsOfGivenArray();
 
-    //Write a function to swap the first and last elements of a given array of integers. The array length should be at least 1.  
+//     //Write a function to add two digits to a given positive integer of length two.  
+
+// async function addTwoDigitsToGivenPositiveInteger() {
+//     const userNumber = await ReadLineUtils.readAddTwoDigitsToGivenPositiveInteger();
+
+//     if (userNumber < 1) {
+//         DisplayUtils.displayErrorUserNumberShouldBePositive();
+//         return;
+//     }
+//     const resultNumber = userNumber % 10 + Math.floor(userNumber / 10);
+
+//     DisplayUtils.displayAddTwoDigitsToGivenPositiveInteger(resultNumber);
+// }
+
+// await addTwoDigitsToGivenPositiveInteger();
+
+//     //Write a function to add two positive integers without carrying.
+
+// async function addTwoPositiveIntegersWithoutCarrying() {
+//     const firstUserNumber = await ReadLineUtils.readFirstUserNumberToAddTwoPositiveIntegersWithoutCarrying()
+//     const secondUserNumber = await ReadLineUtils.readSecondUserNumberToAddTwoPositiveIntegersWithoutCarrying();
+
+//     const resultNumber = MathUtils.addTwoPositiveIntegersWithoutCarrying(firstUserNumber, secondUserNumber);
+
+//     DisplayUtils.displayAddTwoPositiveIntegersWithoutCarrying(resultNumber);
+// }
+
+// await addTwoPositiveIntegersWithoutCarrying();
+
+//     //Write a function to find the longest string from a given array of strings.  
+
+// async function findLongestStringFromGivenArray() {
+//     const userArray = await ReadLineUtils.readUserArrayToFindLongestStringFromGivenArray();
+
+//     const result = ArrayUtils.findLongestStringFromGivenArray(userArray);
+
+//     DisplayUtils.displayFindLongestStringFromGivenArray(result);
+// }
+
+// await findLongestStringFromGivenArray();
+
+//     //Write a function to replace each character in a given string with the next in the English alphabet.  
+//     //Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+
+// async function replaceEachCharacterInGivenStringWithNextInEnglsihAlphabet() {
+//     const userString = await ReadLineUtils.readUserStringToReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet();
+
+//     const resultString = StringUtils.changingEachCharacter(userString);
+
+//     DisplayUtils.displayReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet(resultString);
+// }
+
+// await replaceEachCharacterInGivenStringWithNextInEnglsihAlphabet();
+
+
+
+// //Write a function to divide a given array of positive integers into two parts.
+// //First element belongs to the first part, second element belongs to the second part, 
+// //and third element belongs to the first part and so on. 
+// //Now compute the sum of two parts and store it in an array of size two.  
+
+// async function divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray() {
+//     const userArray = await ReadLineUtils.readArrayToDivieGivenArrayInTwoAndComputeSumOfTwoAPartsToStoreItInArray();
+
+//     const result = ArrayUtils.divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray(userArray);
+
+//     DisplayUtils.displayDivideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreInInArray(result);
+// }
+
+// await divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray();   
+
+//     //Write a function to find the types of a given angle.  
+//     //Types of angles:
+//     //Acute angle: An angle between 0 and 90 degrees.
+//     //Right angle: An 90 degree angle.
+//     //Obtuse angle: An angle between 90 and 180 degrees.
+//     //Straight angle: A 180 degree angle.
+
+// async function findTypeOfGivenAngle() {
+//     const userNumber = await ReadLineUtils.readToFindTypeOfGivenAngle();
+
+//     if (userNumber > 180) {
+//         DisplayUtils.displayErrorUserNumberShouldBeLessThanOneHundredEighty();
+//         return;
+//     }
+
+//     const result = GeometryUtils.findTypeOfGivenAngle(userNumber);
+
+//     DisplayUtils.displayFindTypeOfGivenAngle(result);
+// }
+
+// await findTypeOfGivenAngle();
+
+//     //WWrite a function to determine if two arrays of integers of the same length are similar. 
+//     //The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.  
+
+// async function determineIfTwoArraysAreSameLengthAreSimiliar() {
+//     const firstUserArray = await ReadLineUtils.readFirstArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar();
+//     const secondUserArray = await ReadLineUtils.readSecondArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar();
+
+//     const result = ArrayUtils.determineIfTwoArraysAreSameLengthAreSimiliar(firstUserArray, secondUserArray);
+
+//     DisplayUtils.displayDetermineIfTwoArraysAreSameLengthAreSimiliar(result);
+// }
+
+// await determineIfTwoArraysAreSameLengthAreSimiliar();
+
+//     //Write a function that takes two integers and a divisor.
+//     //If the given divisor divides both integers and does not divide either, two specified integers are similar.
+//     //Check whether two integers are similar or not.
     
-async function swapFirstAndLastElementsOfGivenArray() {
-    const userArray = await ReadLineUtils.readSwapFirstAndLastElementsOfGivenArray();
+// async function checkWhetherTwoIntegersAreSimiliar() {
+//     const firstUserNumber = await ReadLineUtils.firstUserNumberOfTwoIntegersAreSimiliar();
+//     const secondUserNumber = await ReadLineUtils.secondUserNumberOfTwoIntegersAreSimiliar();
+//     const userDivisor = await ReadLineUtils.userDivisorOfTwoIntegersAreSimiliar();
 
-    if (userArray.length < 1) {
-        DisplayUtils.displayErrorUserArrayInputLengthShouldBeMoreThanGivenNumber(1);
-        return;
-    }
+//     const result = MathUtils.checkWhetherTwoIntegersAreSimiliar(firstUserNumber, secondUserNumber, userDivisor);
 
-    const result = ArrayUtils.swapFirstAndLastElementsOfGivenArray(userArray);
+//     DisplayUtils.displayCheckWhetherTwoIntegersAreSimiliar(result);
+// }
 
-    DisplayUtils.displaySwapFirstAndLastElementsOfGivenArray(result);
-}
+// await checkWhetherTwoIntegersAreSimiliar();
 
-await swapFirstAndLastElementsOfGivenArray();
+//     //Write a function to check whether it is possible to replace $ in a given expression x $ y = z with one
+//     // of the four signs +, -, * or / to obtain a correct expression.  
+//     //For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
 
-    //Write a function to add two digits to a given positive integer of length two.  
+// async function checkWhetherItIsPossibleToReplaceDollarSignInGivenExpression() {
+//     DisplayUtils.displayArithmeticExperssion();
 
-async function addTwoDigitsToGivenPositiveInteger() {
-    const userNumber = await ReadLineUtils.readAddTwoDigitsToGivenPositiveInteger();
+//     const x = await ReadLineUtils.readXInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
+//     const y = await ReadLineUtils.readYInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
+//     const z = await ReadLineUtils.readZInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
 
-    if (userNumber < 1) {
-        DisplayUtils.displayErrorUserNumberShouldBePositive();
-        return;
-    }
-    const resultNumber = userNumber % 10 + Math.floor(userNumber / 10);
+//     const result = MathUtils.checkArithmeticsExpression(x, y, z);
 
-    DisplayUtils.displayAddTwoDigitsToGivenPositiveInteger(resultNumber);
-}
+//     DisplayUtils.displayCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression(result);
+// }
 
-await addTwoDigitsToGivenPositiveInteger();
+// await checkWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
 
-    //Write a function to add two positive integers without carrying.
+//     //Write a function to find the kth greatest element in a given array of integers.
 
-async function addTwoPositiveIntegersWithoutCarrying() {
-    const firstUserNumber = await ReadLineUtils.readFirstUserNumberToAddTwoPositiveIntegersWithoutCarrying()
-    const secondUserNumber = await ReadLineUtils.readSecondUserNumberToAddTwoPositiveIntegersWithoutCarrying();
+// async function findKthGreatestElementInGivenArrayOfIntegers() {
+//     const userArray = await ReadLineUtils.readUserArrayToFindKthGreatestElementInGivenArrayOfIntegers();
+//     const userNumber = await ReadLineUtils.readUserNumberToFindKthGreatestElementInGivenArrayOfIntegers();
 
-    const resultNumber = MathUtils.addTwoPositiveIntegersWithoutCarrying(firstUserNumber, secondUserNumber);
+//     const result = ArrayUtils.findKthGreatestElementInGivenArrayOfIntegers(userArray, userNumber);
 
-    DisplayUtils.displayAddTwoPositiveIntegersWithoutCarrying(resultNumber);
-}
+//     DisplayUtils.displayFindKthGreatestElementInGivenArrayOfIntgegers(result);   
+// }
 
-await addTwoPositiveIntegersWithoutCarrying();
+// await findKthGreatestElementInGivenArrayOfIntegers();
 
-    //Write a function to find the longest string from a given array of strings.  
+//     //Write a function to find the maximum possible sum of some 
+//     //of its k consecutive numbers (numbers that follow each other in order) in a given array of positive integers. 
 
-async function findLongestStringFromGivenArray() {
-    const userArray = await ReadLineUtils.readUserArrayToFindLongestStringFromGivenArray();
+// async function findMaximumPossibleSumOfKConsecutiveNumbers() {
+//     const userArray = await ReadLineUtils.readUserArrayToFindMaximumPossibleSumOfKConsecutiveNumbers();
+//     const userNumber = await ReadLineUtils.readUserNumberToFindMaximumPossibleSumOfKConsecutiveNumbers();
 
-    const result = ArrayUtils.findLongestStringFromGivenArray(userArray);
+//     const result = ArrayUtils.findMaximumPossibleSumOfKConsecutiveNumbers(userArray, userNumber);
 
-    DisplayUtils.displayFindLongestStringFromGivenArray(result);
-}
+//     DisplayUtils.displayFindMaximumPossibleSumOfKConsecutiveNumbers(result);
+// }
 
-await findLongestStringFromGivenArray();
+// await findMaximumPossibleSumOfKConsecutiveNumbers(); 
 
-    //Write a function to replace each character in a given string with the next in the English alphabet.  
-    //Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+//     //Write a function to find the maximum difference between any two adjacent elements of a given array of integers. 
 
-async function replaceEachCharacterInGivenStringWithNextInEnglsihAlphabet() {
-    const userString = await ReadLineUtils.readUserStringToReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet();
+// async function findMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray() {
+//     const userArray = await ReadLineUtils.readUserArrayToFindMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray();
 
-    const resultString = StringUtils.changingEachCharacter(userString);
+//     const result = ArrayUtils.findMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray(userArray);
 
-    DisplayUtils.displayReplaceEachCharacterInGivenStringWithNextInEnglishAlphabet(resultString);
-}
+//     DisplayUtils.displayFindMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray(result);    
+// }
 
-await replaceEachCharacterInGivenStringWithNextInEnglsihAlphabet();
+// await findMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray();
 
+//     //Write a function to find the maximum difference among all possible pairs of a given array of integers. 
 
+// async function findMaximumDifferneceAmongAllPossiblePairsOfGivenArray() {
+//     const userArray = await ReadLineUtils.readUserArrayToFindMaximumDifferenceAmongAllPossiblePairsOfGivenArray();
 
-//Write a function to divide a given array of positive integers into two parts.
-//First element belongs to the first part, second element belongs to the second part, 
-//and third element belongs to the first part and so on. 
-//Now compute the sum of two parts and store it in an array of size two.  
+//     const result = ArrayUtils.findMaximumDifferneceAmongAllPossiblePairsOfGivenArray(userArray);
 
-async function divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray() {
-    const userArray = await ReadLineUtils.readArrayToDivieGivenArrayInTwoAndComputeSumOfTwoAPartsToStoreItInArray();
+//     DisplayUtils.displayFindMaximumDifferenceAmongAllPossiblePairsOfGivenArray(result);
+// }
 
-    const result = ArrayUtils.divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray(userArray);
+// await findMaximumDifferneceAmongAllPossiblePairsOfGivenArray();
 
-    DisplayUtils.displayDivideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreInInArray(result);
-}
+//     //Write a function to find the number appearing most frequently in a given array of integers. 
 
-await divideGivenArrayInTwoAndComputeSumOfTwoPartsToStoreItInArray();   
+// async function findNumberAppearingMostFrequentlyInGivenArray() {
+//     const userArray = await ReadLineUtils.readUserArrayToFindNumberAppearingMostFrequentlyInGivenArray();
 
-    //Write a function to find the types of a given angle.  
-    //Types of angles:
-    //Acute angle: An angle between 0 and 90 degrees.
-    //Right angle: An 90 degree angle.
-    //Obtuse angle: An angle between 90 and 180 degrees.
-    //Straight angle: A 180 degree angle.
+//     const result = ArrayUtils.findNumberAppearingMostFrequentlyInGivenArray(userArray);
 
-async function findTypeOfGivenAngle() {
-    const userNumber = await ReadLineUtils.readToFindTypeOfGivenAngle();
+//     DisplayUtils.displayFindNumberAppearingMostFrequentlyInGivenArray(result);
+// }
 
-    if (userNumber > 180) {
-        DisplayUtils.displayErrorUserNumberShouldBeLessThanOneHundredEighty();
-        return;
-    }
+// await findNumberAppearingMostFrequentlyInGivenArray();  
 
-    const result = GeometryUtils.findTypeOfGivenAngle(userNumber);
+//     //Write a function to replace all numbers with a specified number in an array of integers. 
 
-    DisplayUtils.displayFindTypeOfGivenAngle(result);
-}
+// async function replaceAllNumbersWithSpecifiedNumberInArray() {
+//     const userArray = await ReadLineUtils.readUserArrayToReplaceAllNumbersWithSpecifiedNumberInArray();
+//     const firstUserNumber = await ReadLineUtils.readUserReplacementNumberToReplaceAllNumberWithSpecifiedNumberInArray();
+//     const secondUserNumber = await ReadLineUtils.readUserReplacerNumberToReplaceAllNumberWithSpecifiedNumberInArray();
 
-await findTypeOfGivenAngle();
+//     const result = ArrayUtils.replaceAllNumbersWithSpecifiedNumberInArray(userArray, firstUserNumber, secondUserNumber);
 
-    //WWrite a function to determine if two arrays of integers of the same length are similar. 
-    //The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.  
+//     DisplayUtils.displayReplaceAllNumbersWithSpecifiedNumberInArray(result);
+// }
 
-async function determineIfTwoArraysAreSameLengthAreSimiliar() {
-    const firstUserArray = await ReadLineUtils.readFirstArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar();
-    const secondUserArray = await ReadLineUtils.readSecondArrayToDetermineIfTwoArraysAreSameLengthAreSimiliar();
+// await replaceAllNumbersWithSpecifiedNumberInArray();
 
-    const result = ArrayUtils.determineIfTwoArraysAreSameLengthAreSimiliar(firstUserArray, secondUserArray);
+//     //Write a function to compute the sum of the absolute differences of consecutive numbers in a given array of integers. 
 
-    DisplayUtils.displayDetermineIfTwoArraysAreSameLengthAreSimiliar(result);
-}
+// async function computeSumOfAbsoluteDifferencesOfConsecutiveNumbersInGivenArray() {
+//     const userArray = await ReadLineUtils.readUserArrayToComputeSumOfAbsoluteDifferenceOfConsecutiveNumbersInGivenArray();
 
-await determineIfTwoArraysAreSameLengthAreSimiliar();
+//     const result = ArrayUtils.computeSumOfAbsoluteDifferencesOfConsecutiveNumbersInGivenArray(userArray);
 
-    //Write a function that takes two integers and a divisor.
-    //If the given divisor divides both integers and does not divide either, two specified integers are similar.
-    //Check whether two integers are similar or not.
+//     DisplayUtils.displayComputeSumOfAbsoluteDifferencesOfConsecutiveNumbersInGivenArray(result);
+// }
+
+// await computeSumOfAbsoluteDifferencesOfConsecutiveNumbersInGivenArray();
+
+//     //Write a function to find the shortest possible string. 
+//     //This can be converted into a string and converted into a palindrome by adding characters to the end of it. 
+
+// async function findShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome() {
+//     const userArray = await ReadLineUtils.readUserArrayFindShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome();
     
-async function checkWhetherTwoIntegersAreSimiliar() {
-    const firstUserNumber = await ReadLineUtils.firstUserNumberOfTwoIntegersAreSimiliar();
-    const secondUserNumber = await ReadLineUtils.secondUserNumberOfTwoIntegersAreSimiliar();
-    const userDivisor = await ReadLineUtils.userDivisorOfTwoIntegersAreSimiliar();
+//     const result = ArrayUtils.findShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome(userArray);
 
-    const result = MathUtils.checkWhetherTwoIntegersAreSimiliar(firstUserNumber, secondUserNumber, userDivisor);
+//     DisplayUtils.displayFindShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome(result);
+// }
 
-    DisplayUtils.displayCheckWhetherTwoIntegersAreSimiliar(result);
+// await findShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome();
+
+//     // Write a function to change the case of the minimum number of letters to make a given string written in upper case or lower case. 
+//     // Fox example "Write" will be write and "PHp" will be "PHP"
+
+// async function changeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase() {
+//     const userString = await ReadLineUtils.readUserStringToChangeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase();
+
+//     const result = StringUtils.changeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase(userString);
+
+//     DisplayUtils.displayChangeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase(result);
+// }
+
+// await changeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase();
+
+//     //Write a function to check whether it is possible to rearrange the characters of a given string. 
+//     //This is in such a way that it will become equal to another given string. 
+
+// async function checkWhetherItIsPossibleToRearrangeCharactersOfGivenStringInAWayThatItWillBecomeEqualToAnotherGivenString() {
+//     const firstUserString = await ReadLineUtils.readFirstUserStringToCheckWhetherItIsPossibleToRearrangeCharacters();
+//     const secondUserString = await ReadLineUtils.readSecondUserStringToCheckWhetherItIsPossibleToRearrangeCharacters();
+
+//     const result = StringUtils.checkWhetherItIsPossibleToRearrangeCharacters(firstUserString, secondUserString);
+
+//     DisplayUtils.displayCheckWhetherItIsPossibleToRearrangeCharactersOfGivenString(result);
+// }
+
+// await checkWhetherItIsPossibleToRearrangeCharactersOfGivenStringInAWayThatItWillBecomeEqualToAnotherGivenString();
+
+//     //Write a function to check if there is at least one element in two given sorted arrays of integers. 
+
+// async function checkIfThereIsAtLeastOneElementInTwoGivenSortedArrays(){
+//     const firstUserArray = await ReadLineUtils.readFirstUserArrayToCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays();
+//     const secondUserArray = await ReadLineUtils.readSecondUserArrayToCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays();
+
+//     const result = ArrayUtils.checkIfThereIsAtLeastOneElementInTwoGivenSortedArrays(firstUserArray, secondUserArray);
+
+//     DisplayUtils.displayCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays(result);
+// }
+
+// await checkIfThereIsAtLeastOneElementInTwoGivenSortedArrays();
+
+
+    //-----------------------------------------------------------------------------
+
+
+    //Write a function to check whether a given string contains only Latin letters and no two uppercase 
+    //and no two lowercase letters are in adjacent positions. 
+
+async function checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases() {
+    const userString = await ReadLineUtils.readUserStringCheckWhetherGivenStringConatinsOnlyLatinAndAlternatingCases();
+
+    const result = StringUtils.checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases(userString);
+
+    DisplayUtils.displayCheckWhetherGivenStringConatinsOnlyLatinAndAlternatingCases(result);
 }
 
-await checkWhetherTwoIntegersAreSimiliar();
+await checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases();
 
-    //Write a function to check whether it is possible to replace $ in a given expression x $ y = z with one
-    // of the four signs +, -, * or / to obtain a correct expression.  
-    //For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
-
-async function checkWhetherItIsPossibleToReplaceDollarSignInGivenExpression() {
-    DisplayUtils.displayArithmeticExperssion();
-
-    const x = await ReadLineUtils.readXInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
-    const y = await ReadLineUtils.readYInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
-    const z = await ReadLineUtils.readZInCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
-
-    const result = MathUtils.checkArithmeticsExpression(x, y, z);
-
-    DisplayUtils.displayCheckWhetherItIsPossibleToReplaceDollarSignInGivenExpression(result);
-}
-
-await checkWhetherItIsPossibleToReplaceDollarSignInGivenExpression();
-
-    //Write a function to find the kth greatest element in a given array of integers.
-
-async function findKthGreatestElementInGivenArrayOfIntegers() {
-    const userArray = await ReadLineUtils.readUserArrayToFindKthGreatestElementInGivenArrayOfIntegers();
-    const userNumber = await ReadLineUtils.readUserNumberToFindKthGreatestElementInGivenArrayOfIntegers();
-
-    const result = ArrayUtils.findKthGreatestElementInGivenArrayOfIntegers(userArray, userNumber);
-
-    DisplayUtils.displayFindKthGreatestElementInGivenArrayOfIntgegers(result);   
-}
-
-await findKthGreatestElementInGivenArrayOfIntegers();

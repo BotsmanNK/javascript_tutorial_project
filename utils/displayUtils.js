@@ -529,4 +529,62 @@ export class DisplayUtils {
         const resultString = `Your kth element in given array is: ${number}`;
         console.log(resultString);
     }
+
+    static displayFindMaximumPossibleSumOfKConsecutiveNumbers(number) {
+        const resultString = `Maximum possible sum of k consecutive numbers is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindMaximumDifferenceBetweenAnyTwoAdjacentElementsOfGivenArray(number) {
+        const resultString = `Maximum difference between any two adjacent elements of given array is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindMaximumDifferenceAmongAllPossiblePairsOfGivenArray(number) {
+        const resultString = `Maximum difference among all pairs is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindNumberAppearingMostFrequentlyInGivenArray(number) {
+        const resultString = `Number that is appearing most frequently in given array is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayReplaceAllNumbersWithSpecifiedNumberInArray(array) {
+        const resultstring = `An array after replacing all numbers with specified number is: ${array}`;
+        console.log(resultstring);
+    }
+
+    static displayComputeSumOfAbsoluteDifferencesOfConsecutiveNumbersInGivenArray(number) {
+        const resultString = `Sum of absolute differences of consecutive numbers is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindShortestPossibleStringConvertIntoStringAndConvertIntoPalindrome(string) {
+        const resultString = `Shortest string in given array and after convering into palindrome is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayChangeCaseOfMinimumNumberOfLettersToMakeGivenStringWrittenInUpperOrLowerCase(string) {
+        const resultString = `After chaning case of minimum number of letters, new string is: ${string}`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherItIsPossibleToRearrangeCharactersOfGivenString(status) {
+        const resultString = status ? `Characters of two given strings can be rearranged that will become equal to another given string` :
+            `Characters of two given strings can not be rearranged that will become equal to another given string`
+        console.log(resultString);
+    }
+
+    static displayCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays(status) {
+        const resultString = status ? `There is at least one common element in two given arrays` :
+            `There is no at least one common element in two given arrays`;
+        console.log(resultString);
+    }
+
+    static displayCheckWhetherGivenStringConatinsOnlyLatinAndAlternatingCases(status) {
+        const resultString = status ? "Your string conations only latin letters and alternating cases" :
+            "Your string does not contain only latin letters or there are no alternating cases";
+        console.log(resultString);
+    }
 }
