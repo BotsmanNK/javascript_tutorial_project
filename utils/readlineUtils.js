@@ -289,6 +289,26 @@ export class ReadLineUtils {
         return this.readNumber(`Enter your replacer number to replace all numbers in array: `)
     }
 
+    static readFindMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit() {
+        return this.readNumber(`Enter your integer here: `);
+    }
+
+    static readUserNumberFindTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger() {
+        return this.readNumber(`Enter your number here: `);
+    }
+
+    static readUserNumberFindNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits() {
+        return this.readNumber(`Enter your number: `);
+    }
+
+    static readFirstUserNumberToDiviceIntegerByAnotherIntegerAsLongAsResultIsInInteger() {
+        return this.readNumber(`Enter your numerator: `);
+    }
+
+    static readSecondUserNumberToDiviceIntegerByAnotherIntegerAsLongAsResultIsInInteger() {
+        return this.readNumber(`Enter your denominator: `);
+    }
+
     static readString(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({
@@ -577,6 +597,18 @@ export class ReadLineUtils {
 
     static readSecondUserArrayToCheckIfThereIsAtLeastOneElementInTwoGivenSortedArrays() {
         return this.readNumberArray(`Enter your second array: `);
+    }
+
+    static readUserArrayToFindTheNumberOfInverstionsOfGivenArrayOfIntegers() {
+        return this.readNumberArray(`Enter your array here to count number of inverstions: `)
+    }
+
+    static readUserArrayFindTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger() {
+        return this.readNumberArray(`Enter your array here: `)
+    }
+
+    static readUserArrayFindNumberOfSortedPairsFormedByArraysOfIntegers() {
+        return this.readNumberArray(`Enter your array here to find number of sorted pairs: `)
     }
 
     static readStringArray(question) {

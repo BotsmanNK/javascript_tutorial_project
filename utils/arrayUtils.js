@@ -1,3 +1,5 @@
+import { DisplayUtils } from "./displayUtils.js";
+
 export class ArrayUtils {
     static sumOfThreeElementsOfArrayOfLengthThree(array) {
         return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
@@ -189,5 +191,61 @@ export class ArrayUtils {
         }
         return false;
     }
+    
+    static findTheNumberOfInverstionsOfGivenArrayOfIntegers(array) {
+        let inversionCount = 0;
 
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    inversionCount++;
+                }
+            }
+        }
+        return inversionCount;
+    }
+
+    static findTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger(number, array){
+        if (array.length < 2) {
+            return null;
+        }
+
+        array.sort((a, b) => a - b);
+
+        let closestPair = null;
+        let closestDiff = -1;
+
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                const diff = Math.abs(array[i] - array[j]);
+
+                if (diff <= number && diff > closestDiff) {
+                    closestDiff = diff;
+                    closestPair = [array[i], array[j]];
+                }
+
+                if (diff > number) {
+                    break;
+                }
+            }
+        }
+
+        return closestPair;
+    }    
+
+    static findNumberOfSortedPairsFormedByArrayOfIntegers(array) {
+
+        let count = 0;
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                const smaller = Math.min(array[i], array[j]);
+                const larger = Math.max(array[i], array[j]);
+                if (larger % smaller === 0) {
+                    count++;
+                }
+            }
+        }
+        
+        return count;
+    }
 }

@@ -1488,3 +1488,82 @@ async function checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases() {
 
 await checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases();
 
+    //Write a function to find the number of inversions of a given array of integers. 
+    //Note: Two elements of the array a stored at positions i and j form an inversion if a[i] > a[j] and i < j.
+
+async function findTheNumberOfInverstionsOfGivenArrayOfIntegers() {
+    const userArray = await ReadLineUtils.readUserArrayToFindTheNumberOfInverstionsOfGivenArrayOfIntegers();
+
+    const result = ArrayUtils.findTheNumberOfInverstionsOfGivenArrayOfIntegers(userArray);
+
+    DisplayUtils.displayFindTheNumberOfInverstionsOfGivenArrayOfIntegers(result);
+}
+
+await findTheNumberOfInverstionsOfGivenArrayOfIntegers();
+
+    //Write a function to find the maximum number of a given positive integer by deleting exactly one digit of the given number.  
+
+async function findMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit() {
+    const userNumber = await ReadLineUtils.readFindMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit();
+
+    const result = MathUtils.findMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit(userNumber);
+
+    DisplayUtils.displayFindMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit(result);
+}
+
+await findMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit();
+
+    //Write a function to find two elements of an array such that their absolute difference is not larger than a given integer. 
+    //However, it is as close as possible to the integer. 
+
+async function findTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger() {
+    const userNumber = await ReadLineUtils.readUserNumberFindTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger();
+    const userArray = await ReadLineUtils.readUserArrayFindTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger();
+
+    const result = ArrayUtils.findTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger(userNumber, userArray);
+
+    DisplayUtils.displayFindTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger(result);
+}
+
+await findTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger();
+
+    //Write a function to find the number of times to replace a given number with the sum of its digits. 
+    //This is until it converts to a single-digit number. 
+
+async function findNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits() {
+    const userNumber = await ReadLineUtils.readUserNumberFindNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits();
+
+    const result = MathUtils.findNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits(userNumber);
+
+    DisplayUtils.displayFindNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits(result);
+}
+
+await findNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits();
+
+    //Write a function to divide an integer by another integer as long as the result is an integer and return the result.
+
+async function divideIntegerByAnotherIntegerAsLongAsResulitIsInInteger() {
+    const firstUserNumber = await ReadLineUtils.readFirstUserNumberToDiviceIntegerByAnotherIntegerAsLongAsResultIsInInteger();
+    const secondUserNumber = await ReadLineUtils.readSecondUserNumberToDiviceIntegerByAnotherIntegerAsLongAsResultIsInInteger();
+
+    const result = MathUtils.divideIntegerByAnotherIntegerAsLongAsResulitIsInInteger(firstUserNumber, secondUserNumber);
+
+    DisplayUtils.displayDivideIntegerByAnotherIntegerAsLongAsResultIsInInteger(result);
+}
+
+await divideIntegerByAnotherIntegerAsLongAsResulitIsInInteger();
+
+    //Write a function to find the number of sorted pairs formed by arrays of integers. This is such that one element in the pair is divisible by the other one. 
+    //For example - The output of [1, 3, 2] ->2 - (1,3), (1,2).
+    //The output of [2, 4, 6] -> 2 - (2,4), (2,6)
+    //The output of [2, 4, 16] -> 3 - (2,4), (2,16), (4,16)
+
+async function findNumberOfSortedPairsFormedByArraysOfIntegers() {
+    const userArray = await ReadLineUtils.readUserArrayFindNumberOfSortedPairsFormedByArraysOfIntegers();
+
+    const result = ArrayUtils.findNumberOfSortedPairsFormedByArrayOfIntegers(userArray);
+
+    DisplayUtils.displayFindNumberOfSortedPairsFormedByArraysOfIntegers(result);
+}
+
+await findNumberOfSortedPairsFormedByArraysOfIntegers();

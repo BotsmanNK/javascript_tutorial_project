@@ -112,24 +112,8 @@ export class DisplayUtils {
         console.log(resultString);
     }
 
-    static displayErrorUserInputNumberCheck3And7() {
-        console.log(`Please enter a positive number`);
-    }
-
     static displayUserThreeCharacter(string) {
         console.log(`Your new word is ${string}`);
-    }
-
-    static displayErrorUserInputShouldBeMoreThanThreeCharacter() {
-        console.log(`Your word should be more than three characters`);
-    }
-
-    static displayErrorUserInputShouldBeMoreThanSixCharacter() {
-        console.log(`Your word should be more than six characters`);
-    }
-
-    static displayErrorUserInputShouldBeMoreThanGivenNumberOfCharacters(number) {
-        console.log(`Your word should be more than ${number} characters`);
     }
 
     static displayUserStatusStartJava(status) {
@@ -374,31 +358,6 @@ export class DisplayUtils {
         console.log(resultString);
     }
 
-    static displayErrorUserArrayInputLengthShouldBeGivenNumber(number) {
-        const resultString = `Array length should be ${number}`;
-        console.log(resultString);
-    }
-
-    static displayErrorUserArrayInputLengthShouldBeLessThanGivenNumber(number) {
-        const resultString = `Array length should be less than ${number}`;
-        console.log(resultString);
-    }
-
-    static displayErrorUserArrayInputLengthShouldBeMoreThanGivenNumber(number) {
-        const resultString = `Array length should be more than ${number}`;
-        console.log(resultString);
-    }
-
-    static displayErrorUserNumberShouldBePositive() {
-        const resultString = `Number should be positive`;
-        console.log(resultString);
-    }
-
-    static displayErrorUserNumberShouldBeLessThanOneHundredEighty() {
-        const resultString = `Number should between 1 and 180`;
-        console.log(resultString);
-    }
-
     static displayComputeSumOfThreeElementsOfArrayOfLengthThree(number) {
         const resultString = `Sum of three elements in user array is: ${number}`;
         console.log(resultString);
@@ -585,6 +544,87 @@ export class DisplayUtils {
     static displayCheckWhetherGivenStringConatinsOnlyLatinAndAlternatingCases(status) {
         const resultString = status ? "Your string conations only latin letters and alternating cases" :
             "Your string does not contain only latin letters or there are no alternating cases";
+        console.log(resultString);
+    }
+
+    static displayFindTheNumberOfInverstionsOfGivenArrayOfIntegers(number) {
+        const resultString = `Number of inverstions if ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit(number) {
+        const resultString = `Maximum number of given integer by deleting excatly one digit is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindTwoElementsOfArraySuchThatTheirAbsouluteDifferenceIsNotLargerThanAGivenInteger(number) {
+        const resultString = `Two elements of array are: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayFindNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits(number) {
+        const resultString = `Number of times to replace given number with sum of its digits is: ${number}`;
+        console.log(resultString)
+    }
+
+    static displayDivideIntegerByAnotherIntegerAsLongAsResultIsInInteger(number) {
+        const resultString = `Result of dividing integer by another integer as long as result is integer is: ${number}`;
+        console.log(resultString)
+    }
+
+    static displayFindNumberOfSortedPairsFormedByArraysOfIntegers(number) {
+        const resultString = `Number of sorted divisible pairs: ${number}`;
+        console.log(resultString);
+    }
+     
+    static displayErrorUserInputNumberCheck3And7() {
+        console.log(`Please enter a positive number`);
+    }
+
+    static displayErrorUserInputShouldBeMoreThanThreeCharacter() {
+        console.log(`Your word should be more than three characters`);
+    }
+
+    static displayErrorUserInputShouldBeMoreThanSixCharacter() {
+        console.log(`Your word should be more than six characters`);
+    }
+
+    static displayErrorUserInputShouldBeMoreThanGivenNumberOfCharacters(number) {
+        console.log(`Your word should be more than ${number} characters`);
+    }
+
+    static displayErrorUserArrayInputLengthShouldBeGivenNumber(number) {
+        const resultString = `Array length should be ${number}`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserArrayInputLengthShouldBeLessThanGivenNumber(number) {
+        const resultString = `Array length should be less than ${number}`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserArrayInputLengthShouldBeMoreThanGivenNumber(number) {
+        const resultString = `Array length should be more than ${number}`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserNumberShouldBePositive() {
+        const resultString = `Number should be positive`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserNumberShouldBeLessThanOneHundredEighty() {
+        const resultString = `Number should between 1 and 180`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserNumberShouldBeNumbers() {
+        const resultString = 'Please enter valid integers';
+        console.log(resultString);
+    }
+
+    static displayErrorUserNumberShouldNotBeZero() {
+        const resultString = 'Denominator can not be zero';
         console.log(resultString);
     }
 }

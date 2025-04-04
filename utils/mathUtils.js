@@ -1,3 +1,5 @@
+import { DisplayUtils } from "./displayUtils.js";
+
 export class MathUtils {
     static round(number, digits) {
         const digitsPow = Math.pow(10, digits);
@@ -78,4 +80,51 @@ export class MathUtils {
         return firstNumber + secondNumber == totalNumber || firstNumber * secondNumber == totalNumber ||
                firstNumber / secondNumber == totalNumber || firstNumber - secondNumber == totalNumber;
     }
+
+    static findMaximumNumberOfGivenIntegerByDeletingExcatlyOneDigit(number) {
+        const numStr = number.toString(); 
+        let maxNumber = 0;
+
+        for (let i = 0; i < numStr.length; i++) {
+            const newNumber = parseInt(numStr.slice(0, i) + numStr.slice(i + 1), 10);
+            maxNumber = Math.max(maxNumber, newNumber); 
+        }
+
+        return maxNumber;
+    }
+
+    static findNumberOfTimesToReplaceGivenNumberWithSumOfItsDigits(number){
+        let count = 0;
+
+        while (number >= 10) {
+            let sum = 0;
+            while (number > 0) {
+                sum += number % 10;
+                number = Math.floor(number / 10);
+            }
+            number = sum;
+            count++;
+        }
+
+        return count;
+    }
+
+    static divideIntegerByAnotherIntegerAsLongAsResulitIsInInteger(firstNumber, secondNumber) { 
+        if (Number.isInteger(firstNumber) || Number.isInteger(secondNumber)) {
+            return DisplayUtils.displayErrorUserNumberShouldBeNumbers();
+        }
+        
+        if (secondNumber === 0) {
+            DisplayUtils.displayErrorUserNumberShouldNotBeZero();
+            return null;
+        }
+
+        let result = firstNumber;
+        while (Number.isInteger(result / secondNumber)) {
+            result = result / secondNumber;
+        }
+        
+        return result;
+    }
+    
 }
