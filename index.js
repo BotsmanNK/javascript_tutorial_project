@@ -1477,7 +1477,7 @@ await rotateElementsLeftInGivenArrayOfLengthThree(); */
 
     //Write a function to check whether a given string contains only Latin letters and no two uppercase 
     //and no two lowercase letters are in adjacent positions. 
-
+/*
 async function checkWhetherGivenStringConatinsOnlyLatinAndAlternatingCases() {
     const userString = await ReadLineUtils.readUserStringCheckWhetherGivenStringConatinsOnlyLatinAndAlternatingCases();
 
@@ -1566,4 +1566,23 @@ async function findNumberOfSortedPairsFormedByArraysOfIntegers() {
     DisplayUtils.displayFindNumberOfSortedPairsFormedByArraysOfIntegers(result);
 }
 
-await findNumberOfSortedPairsFormedByArraysOfIntegers();
+await findNumberOfSortedPairsFormedByArraysOfIntegers(); */
+
+    //Write a function to create the dot products of two given 3D vectors. 
+    //Note: The dot product is the sum of the products of the corresponding entries of the two sequences of numbers.
+    
+async function findDotProductsOfTwoGiven3DVectors() {
+    const firstUserArray = await ReadLineUtils.readFirstUserArrayToFindDotProductsOfTwoGiven3DVectors();
+    const secondUserArray = await ReadLineUtils.readSecondUserArrayToFindDotProductsOfTwoGiven3DVectors();
+
+    if (firstUserArray.length != 3 || secondUserArray.length != 3) {
+        DisplayUtils.displayErrorUserArrayInputLengthShouldBeGivenNumber();
+        return;
+    } 
+
+    const result = MathUtils.createDotProductsOfTwoGiven3DVectors(firstUserArray, secondUserArray);
+
+    DisplayUtils.displayFindDotProductsOfTwoGiven3DVectors(result);
+}
+
+await findDotProductsOfTwoGiven3DVectors();

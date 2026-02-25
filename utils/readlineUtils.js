@@ -611,6 +611,14 @@ export class ReadLineUtils {
         return this.readNumberArray(`Enter your array here to find number of sorted pairs: `)
     }
 
+    static readFirstUserArrayToFindDotProductsOfTwoGiven3DVectors() {
+        return this.readNumberArray('Enter coordinates of first vector: ')
+    }
+    
+    static readSecondUserArrayToFindDotProductsOfTwoGiven3DVectors() {
+        return this.readNumberArray('Enter coordinates of second vector: ')
+    }
+    
     static readStringArray(question) {
         return new Promise((resolve) => {
             const rl = readline.createInterface({

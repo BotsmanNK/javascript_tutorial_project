@@ -126,5 +126,16 @@ export class MathUtils {
         
         return result;
     }
+
+    static createDotProductsOfTwoGiven3DVectors (firstUserArray, secondUserArray) {
+        let result = 0; 
+        
+                for (let i = 0; i < 3; i++) {
+            result += firstUserArray[i] * secondUserArray[i]; // Sum the products of corresponding components
+        }
+
+        return result
+
+    }
     
 }

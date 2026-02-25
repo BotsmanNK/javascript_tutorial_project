@@ -627,4 +627,14 @@ export class DisplayUtils {
         const resultString = 'Denominator can not be zero';
         console.log(resultString);
     }
+
+    static displayFindDotProductsOfTwoGiven3DVectors(number) {
+        const resultString = `Dot products of two given 3D vectors is: ${number}`;
+        console.log(resultString);
+    }
+
+    static displayErrorUserArrayInputLengthShouldBeGivenNumber() {
+        const resultString = `Arrays should consist of three number`;
+        console.log(resultString);
+    }
 }
